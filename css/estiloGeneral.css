@@ -1,68 +1,208 @@
+.index-page body, .index-page html {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo de toda la página */
+    overflow-x: hidden; /* Ocultar el desbordamiento horizontal en dispositivos pequeños */
+}
 
 /* Patrones Generales */
-/*Google Font*/
-*{
+/* Google Font */
+* {
     font-family: "Abel", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-/* NAVEGADOR */
-.logoNav{
-    width: 100px;
-}
-
-.sectionContainer-item img{
-    width: 100vw;
-}
-
-/* FOOTER */
-
-.footerContainer{
-    background-color: #000000;
-    height: 300px;
-    width: 100vw;
+/* Contenedor Principal */
+.mainContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    min-height: 100vh; /* Establecer la altura mínima para que el contenedor principal abarque toda la altura de la ventana */
+    position: relative;
 }
 
-.footerDivContainer{
-    width: 90vw;
+/* Contenedor de Sección */
+.sectionContainer {
+    height: 100%; /* Asegurar que la sección ocupe toda la altura del contenedor principal */
+    display: flex; /* Usar flexbox para centrar verticalmente la imagen */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    border-bottom: solid 1px #202020;
+    border-top: solid 1px #202020;
+}
+
+/* Estilos para el navbar */
+.container {
+    width: 100%;; /* Ancho máximo para el contenedor */
     display: flex;
-    flex-direction: row;
+    justify-content: space-between; /* Espacio entre los elementos del navbar */
     align-items: center;
-    justify-content: space-between;
 }
-/* LINKS DEL FOOTER */
 
-.footerItemContainer{
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo del navbar */
+    padding: 1rem; /* Espaciado interior */
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos del navbar */
+    align-items: center;
+}
+
+.navbar-brand {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    display: flex; /* Alinear el logo y el nombre de la marca */
+    align-items: center;
+}
+
+.navbar-brand img {
+width: 6rem;
+}
+
+.logoNav {
+    width: 250px; /* Ancho de la imagen del logo */
+    margin-right: 1rem; /* Espaciado entre el logo y el nombre de la marca */
+}
+
+.navbar-nav {
+    list-style: none; /* Eliminar viñetas de la lista */
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 1rem; /* Espaciado entre elementos */
+}
+
+.navbar-link {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    color: #000; /* Color del texto del enlace */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.navbar-link:hover {
+    color: #007bff; /* Cambio de color al pasar el ratón */
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center; /* Alinear verticalmente los elementos del navbar */
+}
+
+.search-input {
+    padding: 0.5rem; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde del input */
+    border-radius: 0.25rem; /* Borde redondeado */
+}
+
+.search-button {
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 0.25rem; /* Borde redondeado */
+    cursor: pointer; /* Cambio de cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave del color */
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+
+/* Footer */
+.footerContainer {
+    background-color: #000000; /* Color de fondo del footer */
+    color: #ffffff; /* Color del texto del footer */
+    padding: 10px 0; /* Espaciado interno del footer */
+    width: 100%;
+    margin-top: auto; /* Esto empujará el footer hacia abajo al final del contenedor principal */
+}
+
+/* Contenedor del Footer */
+.footerDivContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Elementos del Footer */
+.footerItemContainer {
     display: flex;
     flex-direction: row;
     align-items: start;
+    margin: 0;
 }
 
-li a{
-    color: #ffffff;
+.footerItemContainer h6 {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.footerItemContainer h4 {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.footerItemContainer a {
+    margin-left: 7px;
+    margin-right: 7px;
     text-decoration: none;
-    font-size: 20px;
 }
 
-li a:hover{
-    text-decoration: underline;
-    color: aliceblue;
-    text-underline-offset: 5px;
-    
-}
-
-li{
-    list-style: none;
-}
-
-/* LOGO FOOTER */
-
-.footerLogo{
+/* Logo del Footer */
+.footerLogo {
     width: 250px;
+    margin-right: 20px;
+}
+
+/* Estilos Contact Us */
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Cambiar a disposición de columna en dispositivos pequeños */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem; /* Espaciado inferior entre el logo y los enlaces */
+    }
+
+    .navbar-brand img {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        width: 100%; /* Asegurar que ocupen el ancho completo */
+    }
+
+    .navbar-link {
+        margin-bottom: 0.5rem; /* Espacio entre elementos en dispositivos pequeños */
+    }
+
+    .search-input {
+        margin-top: 0.5rem; /* Espaciado superior */
+    }
+
+    .footerLogo {
+        display: none; /* Ocultar la imagen del logo en dispositivos pequeños */
+    }
+
+    /* Centrar elementos del footer en dispositivos pequeños */
+    .footerDivContainer {
+        text-align: center;
+        padding: auto;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column; /* Cambiar a disposición de columna en dispositivos pequeños */
+        align-items: flex-center; /* Alinear los elementos a la izquierda */
+    }
+
+    .navbar-search {
+        margin-top: 1rem; /* Espaciado superior */
+    }
 }
