@@ -1,8 +1,9 @@
-.index-page body, .index-page html {
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Fondo de toda la página */
+    background-color: #ffffff; /* Fondo de toda la página */
     overflow-x: hidden; /* Ocultar el desbordamiento horizontal en dispositivos pequeños */
+    width: 100%;   
 }
 
 /* Patrones Generales */
@@ -19,6 +20,7 @@
     flex-direction: column;
     min-height: 100vh; /* Establecer la altura mínima para que el contenedor principal abarque toda la altura de la ventana */
     position: relative;
+    max-height: 200vh;
 }
 
 /* Contenedor de Sección */
@@ -29,11 +31,18 @@
     align-items: center; /* Centrar horizontalmente */
     border-bottom: solid 1px #202020;
     border-top: solid 1px #202020;
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.sectionContainer-item img {
+    height: 100%
 }
 
 /* Estilos para el navbar */
 .container {
-    width: 100%;; /* Ancho máximo para el contenedor */
+    width: 100%; /* Ancho máximo para el contenedor */
     display: flex;
     justify-content: space-between; /* Espacio entre los elementos del navbar */
     align-items: center;
@@ -114,7 +123,7 @@ width: 6rem;
     color: #ffffff; /* Color del texto del footer */
     padding: 10px 0; /* Espaciado interno del footer */
     width: 100%;
-    margin-top: auto; /* Esto empujará el footer hacia abajo al final del contenedor principal */
+    margin-top: auto;
 }
 
 /* Contenedor del Footer */
