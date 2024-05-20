@@ -25,18 +25,15 @@ body, html {
 
 /* Contenedor de Sección */
 .sectionContainer {
-    height: 100vh; /* Asegurar que la sección ocupe toda la altura de la ventana */
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Asegurar que la sección ocupe toda la altura del contenedor principal */
+    display: flex; /* Usar flexbox para centrar verticalmente la imagen */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    border-bottom: solid 1px #E0CCBE;
+    border-top: solid 1px #E0CCBE;
     padding: 0;
     margin: 0;
     background-color: #000000;
-    position: relative; /* Para que el título pueda posicionarse absolutamente */
-    background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Ajustar la imagen para que cubra todo el contenedor */
-    background-position: center; /* Centrar la imagen */
-    padding-top: 150px;
 }
 
 .titleMain {
@@ -45,46 +42,11 @@ body, html {
     font-weight: 600;
     margin: 0;
     padding-top: 40px;
-    display: flex;
-    justify-content: center;
-    text-shadow: 2px 2px #000000;
-}
-
-.buttonMain {
-    background-color: #000000;
-    color: #E0CCBE;
-    border: solid 0.5px #000000;
-    padding: 10px 20px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    display: flex;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
 }
 
-.buttonMain:hover {
-    background-color: #E0CCBE;
-    color: #000000;
-}
-
-.aButtonMain {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-.sectionContainer-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.sectionContainer-item img {
+    height: 100%
 }
 
 /* Estilos para el navbar */
@@ -110,11 +72,11 @@ body, html {
 }
 
 .navbar-brand img {
-width: 10rem;
+width: 6rem;
 }
 
 .logoNav {
-    width: 100%; /* Ancho de la imagen del logo */
+    width: 350px; /* Ancho de la imagen del logo */
     margin-right: 1rem; /* Espaciado entre el logo y el nombre de la marca */
 }
 
@@ -149,13 +111,7 @@ width: 10rem;
     border: 2px solid #747264; /* Borde del input */
     border-radius: 0.25rem; /* Borde redondeado */
     background-color: #E0CCBE;
-    color: #000000;
-}
-
-.search-input::placeholder {
-    color: #000000;
-    font-size: 13px;
-    font-weight: bold;
+    color: black;
 }
 
 /* Footer */
@@ -165,7 +121,6 @@ width: 10rem;
     padding: 10px 0; /* Espaciado interno del footer */
     width: 100%;
     margin-top: auto;
-    border-top: solid 1px #E0CCBE;
 }
 
 /* Contenedor del Footer */
@@ -211,7 +166,6 @@ width: 10rem;
     color: #E0CCBE;
     font-size: medium;
 }
-
 
 /* Estilos Contact Us */
 
@@ -273,5 +227,8 @@ width: 10rem;
         margin-top: 0;
     }
 
+    .sectionContainer-item img {
+        height: 60rem;
+    }
 
 }
