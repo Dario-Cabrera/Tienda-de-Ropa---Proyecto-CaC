@@ -29,11 +29,20 @@ body, html {
     display: flex; /* Usar flexbox para centrar verticalmente la imagen */
     justify-content: center; /* Centrar verticalmente */
     align-items: center; /* Centrar horizontalmente */
-    border-bottom: solid 1px #202020;
-    border-top: solid 1px #202020;
+    border-bottom: solid 1px #E0CCBE;
+    border-top: solid 1px #E0CCBE;
     padding: 0;
     margin: 0;
     background-color: #000000;
+}
+
+.titleMain {
+    color: #E0CCBE;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 40px;
+    text-align: center;
 }
 
 .sectionContainer-item img {
@@ -49,7 +58,7 @@ body, html {
 }
 
 .navbar {
-    background-color: #f8f9fa; /* Color de fondo del navbar */
+    background-color: #E0CCBE; /* Color de fondo del navbar */
     padding: 1rem; /* Espaciado interior */
     display: flex;
     justify-content: space-between; /* Espacio entre los elementos del navbar */
@@ -67,7 +76,7 @@ width: 6rem;
 }
 
 .logoNav {
-    width: 250px; /* Ancho de la imagen del logo */
+    width: 350px; /* Ancho de la imagen del logo */
     margin-right: 1rem; /* Espaciado entre el logo y el nombre de la marca */
 }
 
@@ -82,14 +91,14 @@ width: 6rem;
 
 .navbar-link {
     text-decoration: none; /* Eliminar subrayado del enlace */
-    color: #000; /* Color del texto del enlace */
-    font-size: 1rem; /* Tamaño de fuente */
+    font-size: 1.2rem; /* Tamaño de fuente */
     font-weight: bold; /* Grosor de la fuente */
     transition: color 0.3s ease; /* Transición suave del color */
+    color: #747264;
 }
 
 .navbar-link:hover {
-    color: #007bff; /* Cambio de color al pasar el ratón */
+    color: #3C3633; /* Cambio de color al pasar el ratón */
 }
 
 .navbar-search {
@@ -99,22 +108,10 @@ width: 6rem;
 
 .search-input {
     padding: 0.5rem; /* Espaciado interno */
-    border: 1px solid #ced4da; /* Borde del input */
+    border: 2px solid #747264; /* Borde del input */
     border-radius: 0.25rem; /* Borde redondeado */
-}
-
-.search-button {
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 0.25rem; /* Borde redondeado */
-    cursor: pointer; /* Cambio de cursor al pasar por encima */
-    transition: background-color 0.3s ease; /* Transición suave del color */
-}
-
-.search-button:hover {
-    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+    background-color: #E0CCBE;
+    color: black;
 }
 
 /* Footer */
@@ -165,6 +162,10 @@ width: 6rem;
     margin-right: 20px;
 }
 
+.infofooter {
+    color: #E0CCBE;
+}
+
 /* Estilos Contact Us */
 
 /* Media query para dispositivos pequeños */
@@ -204,6 +205,7 @@ width: 6rem;
         padding: auto;
         margin: auto;
         justify-content: center;
+        padding-bottom: 30px;
     }
 
     .container {
@@ -214,4 +216,12 @@ width: 6rem;
     .navbar-search {
         margin-top: 1rem; /* Espaciado superior */
     }
+    
+    .titleMain {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
 }
