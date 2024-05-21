@@ -325,9 +325,14 @@ width: 10rem;
     .titleMain {
         font-size: 2.5rem;
     }
+    .navbar-items {
+        margin-right: 60px;
+        }
 }
 
 /* Media query para pantallas de escritorio (más de 1024px) */
 @media (min-width: 1024px) {
-    
+    .navbar-items {
+        margin-right: 60px;
+        }
 }
