@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
     <!--CSS-->
     <link rel="stylesheet" href="/css/contactUs.css" />
-    <title></title>
+    <title>Levona Fashion & Clothing - Contact Us</title>
   </head>
   <body class="contact-page">
     <!-- Cambiamos el ID por una clase llamada "contact-page" -->
@@ -36,52 +36,50 @@
     </header>
     <main class="mainContainerContactUs">
       <section class="sectionContainerContactUs">
-        <div class="contact-form">
-          <!-- Agregar la clase "contact-form" -->
-          <h1>Contacto</h1>
-          <p>Rellena el formulario para ponerte en contacto con nosotros</p>
-          <div>
-            <h6>Direccion y horarios</h6>
-            <p>General Paz 656</p>
-            <p>Lunes a Viernes: 08:00 a 16:00</p>
-            <p>Sábados: 08:00 a 12:00</p>
-            <h6>Teléfonos</h6>
-            <p>Whatsapp: +54-0381-1234567</p>
-            <p>Tel: +54-0381-4123456</p>
-            <h6>Redes Sociales</h6>
-            <div>
-              <a href="#"><img src="https://i.ibb.co/WGr2GVn/facebook-5968973-NEGRO.png" width="29" height="29" alt="Facebook" /></a>
-              <a href="#"><img src="https://i.ibb.co/xDwCBvp/instagram-5968982-NEGRO.png" width="29" height="29" alt="Instagram" /></a>
-              <a href="#"><img src="https://i.ibb.co/V22ntPY/whatsapp-5969035-NEGRO.png" width="29" height="29" alt="WhatsApp" /></a>
-            </div>
-          </div>
-          <form>
-            <div>
-              <label for="name">Nombre Completo</label>
-              <input type="text" id="name" placeholder="Nombre Completo" />
-            </div>
-            <div>
-              <label for="email">Correo Electrónico</label>
-              <input type="email" id="email" placeholder="Correo Electrónico" />
-            </div>
-            <div>
-              <label for="tel">Número de Teléfono</label>
-              <input type="tel" id="tel" placeholder="Número de Teléfono" />
-            </div>
-            <div>
-              <label for="message">Mensaje</label>
-              <textarea id="message" placeholder="Mensaje"></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-        <!-- Modal -->
-        <div class="modal">
-          <!-- Agregar la clase "modal" -->
-          <div class="modal-content">
-            <h2>Mensaje enviado correctamente.</h2>
-            <div>
-              <button>Cerrar</button>
+        <div class="divparaacomodareltitulo">
+          <div class="contenedormayor">
+            <h1 class="h1contactate"> Contactate con <span class="spannombredelblogh1">Levona</span> </h1>
+            <div class="contenedorparahacercolumnas">
+              <div class="contenedorinfodecontacto">
+                <h4 class="h4Información">Información</h4>
+                <ul class="listadodeinformaciondecontacto">
+                  <li class="itemlistadodeinformaciondecontacto"> <img class="iconoinfodecontacto" src="./img/llamada-telefonica.png" alt="" />3815120555 </li>
+                  <li class="itemlistadodeinformaciondecontacto"> <img class="iconoinfodecontacto" src="./img/sobre.png" alt="" />levona@levona.corp.com </li>
+                  <li class="itemlistadodeinformaciondecontacto"> <img class="iconoinfodecontacto" src="./img/reloj.png" alt="" />Lunes a Viernes - 08:00 a 19:00 </li>
+                  <li class="itemlistadodeinformaciondecontacto"> <img class="iconoinfodecontacto" src="./img/marcador.png" alt="" />Av. Colón 147, San Miguel de Tucumán, Tucumán, Argentina </li>
+                </ul>
+                <div>
+                  <a href="#"><img src="https://i.ibb.co/WGr2GVn/facebook-5968973-NEGRO.png" width="29" height="29" alt="Facebook" /></a>
+                  <a href="#"><img src="https://i.ibb.co/xDwCBvp/instagram-5968982-NEGRO.png" width="29" height="29" alt="Instagram" /></a>
+                  <a href="#"><img src="https://i.ibb.co/V22ntPY/whatsapp-5969035-NEGRO.png" width="29" height="29" alt="WhatsApp" /></a>
+                </div>
+                <iframe
+                  class="mapa"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.4066452044713!2d-65.23537992556095!3d-26.827015576698344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c60a9069b4b%3A0x5f8070a26fc241ab!2sAv.%20Col%C3%B3n%20147%2C%20T4000KHB%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1696706905913!5m2!1ses-419!2sar"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <!-- PARTE DEL FORMULARIOS DE CONTACTO "DERECHA" -->
+              <div class="contenedorformulariodecontacto">
+                <h4 class="h4envianosunmensaje">Envianos un mensaje!</h4>
+                <form action="" class="formdeenvianosunmensaje">
+                  <div class="divdeimputytextarea">
+                    <input type="text" class="inputform" placeholder="Nombre" />
+                    <input type="text" class="inputform" placeholder="Apellido" />
+                    <input type="numver" class="inputform" required="on" placeholder="Telefono" />
+                    <input type="email" class="inputform" required="on" placeholder="Email" />
+                    <textarea name="Mensaje" placeholder="Escribe tu mensaje aquí" class="textarea" cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="divdeboton">
+                    <button class="botondeenviar"><b>ENVIAR</b></button>
+                  </div>
+                </form>
+              </div>
+              <!-- PARTE DEL FORMULARIOS DE CONTACTO "DERECHA" -->
             </div>
           </div>
         </div>
@@ -92,20 +90,20 @@
         <div class="footerItemContainer">
           <div class="footerDivItem">
             <h4 class="footerLink">Atención</h4>
-            <h6 class="">General Paz 656</h6>
-            <h6 class="">Lunes a Viernes: 08:00 a 16:00</h6>
-            <h6 class="">Sábados: 08:00 a 12:00</h6>
+            <h6>General Paz 656</h6>
+            <h6>Lunes a Viernes: 08:00 a 16:00</h6>
+            <h6>Sábados: 08:00 a 12:00</h6>
           </div>
           <div class="footerDivItem">
-            <h4 className="footerLink">Redes Sociales</h4>
+            <h4 class="footerLink">Redes Sociales</h4>
             <a href="https://www.facebook.com/LevonaFashion&Clothing" target="_blank">
-              <img src="https://i.ibb.co/svX8BYY/facebook-5968973-BLANCO.png" width="29" height="29" className="img-fluid cursor-pointer" />
+              <img src="https://i.ibb.co/svX8BYY/facebook-5968973-BLANCO.png" width="29" height="29" />
             </a>
             <a href="https://www.instagram.com/LevonaFashion&Clothing" target="_blank">
-              <img src="https://i.ibb.co/xs2KJMx/instagram-5968982-BLANCO.png" width="29" height="29" className="img-fluid cursor-pointer" />
+              <img src="https://i.ibb.co/xs2KJMx/instagram-5968982-BLANCO.png" width="29" height="29" />
             </a>
             <a href="https://www.whatsapp.com/LevonaFashion&Clothing" target="_blank">
-              <img src="https://i.ibb.co/s6fQm49/whatsapp-5969035-BLANCO.png" width="29" height="29" className="img-fluid cursor-pointer" />
+              <img src="https://i.ibb.co/s6fQm49/whatsapp-5969035-BLANCO.png" width="29" height="29" />
             </a>
           </div>
         </div>
