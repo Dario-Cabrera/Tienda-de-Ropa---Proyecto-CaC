@@ -36,7 +36,21 @@ body, html {
     background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg'); /* Imagen de fondo */
     background-size: cover; /* Ajustar la imagen para que cubra todo el contenedor */
     background-position: center; /* Centrar la imagen */
+    animation: changeBackground 15s infinite; /* Añadir animación */
     padding-top: 150px;
+}
+
+/* Animación para cambiar el fondo */
+@keyframes changeBackground {
+    0% {
+        background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg');
+    }
+    33% {
+        background-image: url('/img/fotoCentral/Getty.jpeg');
+    }
+    66% {
+        background-image: url('/img/fotoCentral/4bf2ae67s9nz.webp');
+    }
 }
 
 .titleMain {
@@ -213,9 +227,7 @@ width: 10rem;
 }
 
 
-/* Estilos Contact Us */
-
-/* Media query para dispositivos pequeños */
+/* Media query para dispositivos móviles (hasta 768px) */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Cambiar a disposición de columna en dispositivos pequeños */
@@ -265,13 +277,57 @@ width: 10rem;
     }
     
     .titleMain {
-        text-align: center;
         font-size: 2rem;
     }
 
     .sectionContainer {
         margin-top: 0;
     }
+}
 
+/* Media query para tabletas (entre 768px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row; /* Disposición en fila */
+        align-items: start; /* Alinear los elementos al centro */
+    }
 
+    .navbar-brand {
+        width: 20%; /* Ajustar tamaño del logo */
+    }
+
+    .navbar-brand img {
+        width: 100%; /* Ajustar tamaño del logo */
+    }
+
+    .navbar-nav {
+        width: auto; /* Ajustar el ancho */
+    }
+
+    .navbar-link {
+        margin-bottom: 0; /* Eliminar espacio entre elementos */
+    }
+
+    .footerDivContainer {
+        text-align: left; /* Alinear texto a la izquierda */
+        justify-content: space-between; /* Distribuir espacio entre elementos */
+    }
+
+    .container {
+        flex-direction: row; /* Disposición en fila */
+        align-items: center; /* Alinear elementos al centro */
+    }
+
+    .navbar-search {
+        margin-top: 0; /* Eliminar espaciado superior */
+    }
+    
+    .titleMain {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media query para pantallas de escritorio (más de 1024px) */
+@media (min-width: 1024px) {
+    
 }
