@@ -1,3 +1,345 @@
+/*Estilos para nav y footer*/
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fondo de toda la página */
+    overflow-x: hidden; /* Ocultar el desbordamiento horizontal en dispositivos pequeños */
+    width: 100%;   
+}
+
+/* Patrones Generales */
+/* Google Font */
+* {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Contenedor Principal */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Establecer la altura mínima para que el contenedor principal abarque toda la altura de la ventana */
+    position: relative;
+    max-height: 200vh;
+}
+
+/* Contenedor de Sección */
+.sectionContainer {
+    height: 100vh; /* Asegurar que la sección ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    position: relative; /* Para que el título pueda posicionarse absolutamente */
+    background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajustar la imagen para que cubra todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+    animation: changeBackground 15s infinite; /* Añadir animación */
+    padding-top: 150px;
+}
+
+/* Animación para cambiar el fondo */
+@keyframes changeBackground {
+    0% {
+        background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg');
+    }
+    33% {
+        background-image: url('/img/fotoCentral/Getty.jpeg');
+    }
+    66% {
+        background-image: url('/img/fotoCentral/4bf2ae67s9nz.webp');
+    }
+}
+
+.titleMain {
+    color: #E0CCBE;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px #000000;
+}
+
+.buttonMain {
+    background-color: #000000;
+    color: #E0CCBE;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.buttonMain:hover {
+    background-color: #E0CCBE;
+    color: #000000;
+}
+
+.aButtonMain {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.sectionContainer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el navbar */
+.container {
+    width: 100%; /* Ancho máximo para el contenedor */
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos del navbar */
+    align-items: center;
+}
+
+.navbar {
+    background-color: #E0CCBE; /* Color de fondo del navbar */
+    padding: 1rem; /* Espaciado interior */
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos del navbar */
+    align-items: center;
+}
+
+.navbar-brand {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    display: flex; /* Alinear el logo y el nombre de la marca */
+    align-items: center;
+}
+
+.navbar-brand img {
+width: 10rem;
+}
+
+.logoNav {
+    width: 100%; /* Ancho de la imagen del logo */
+    margin-right: 1rem; /* Espaciado entre el logo y el nombre de la marca */
+}
+
+.navbar-nav {
+    list-style: none; /* Eliminar viñetas de la lista */
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 1rem; /* Espaciado entre elementos */
+}
+
+.navbar-link {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    transition: color 0.3s ease; /* Transición suave del color */
+    color: #747264;
+}
+
+.navbar-link:hover {
+    color: #3C3633; /* Cambio de color al pasar el ratón */
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center; /* Alinear verticalmente los elementos del navbar */
+}
+
+.search-input {
+    padding: 0.5rem; /* Espaciado interno */
+    border: 2px solid #747264; /* Borde del input */
+    border-radius: 0.25rem; /* Borde redondeado */
+    background-color: #E0CCBE;
+    color: #000000;
+}
+
+.search-input::placeholder {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footerContainer {
+    background-color: #000000; /* Color de fondo del footer */
+    color: #ffffff; /* Color del texto del footer */
+    padding: 10px 0; /* Espaciado interno del footer */
+    width: 100%;
+    margin-top: auto;
+    border-top: solid 1px #E0CCBE;
+}
+
+/* Contenedor del Footer */
+.footerDivContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Elementos del Footer */
+.footerItemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin: 0;
+}
+
+.footerItemContainer h6 {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.footerItemContainer h4 {
+    margin-left: 20px;
+    margin-right: 22px;
+    text-align: center;
+}
+
+.footerItemContainer a {
+    margin-left: 7px;
+    margin-right: 7px;
+    text-decoration: none;
+}
+
+/* Logo del Footer */
+.footerLogo {
+    width: 250px;
+    margin-right: 20px;
+}
+
+.footerDivItem h4 {
+    color: #E0CCBE;
+    font-size: medium;
+}
+
+
+/* Media query para dispositivos móviles (hasta 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Cambiar a disposición de columna en dispositivos pequeños */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem; /* Espaciado inferior entre el logo y los enlaces */
+    }
+
+    .navbar-brand img {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        width: 100%; /* Asegurar que ocupen el ancho completo */
+    }
+
+    .navbar-link {
+        margin-bottom: 0.5rem; /* Espacio entre elementos en dispositivos pequeños */
+    }
+
+    .search-input {
+        margin-top: 0.5rem; /* Espaciado superior */
+    }
+
+    .footerLogo {
+        display: none; /* Ocultar la imagen del logo en dispositivos pequeños */
+    }
+
+    /* Centrar elementos del footer en dispositivos pequeños */
+    .footerDivContainer {
+        text-align: center;
+        padding: auto;
+        margin: auto;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    .container {
+        flex-direction: column; /* Cambiar a disposición de columna en dispositivos pequeños */
+        align-items: flex-center; /* Alinear los elementos a la izquierda */
+    }
+
+    .navbar-search {
+        margin-top: 1rem; /* Espaciado superior */
+    }
+    
+    .titleMain {
+        font-size: 2rem;
+    }
+
+    .sectionContainer {
+        margin-top: 0;
+    }
+}
+
+/* Media query para tabletas (entre 768px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row; /* Disposición en fila */
+        align-items: start; /* Alinear los elementos al centro */
+    }
+
+    .navbar-brand {
+        width: 20%; /* Ajustar tamaño del logo */
+    }
+
+    .navbar-brand img {
+        width: 100%; /* Ajustar tamaño del logo */
+    }
+
+    .navbar-nav {
+        width: auto; /* Ajustar el ancho */
+    }
+
+    .navbar-link {
+        margin-bottom: 0; /* Eliminar espacio entre elementos */
+    }
+
+    .footerDivContainer {
+        text-align: left; /* Alinear texto a la izquierda */
+        justify-content: space-between; /* Distribuir espacio entre elementos */
+    }
+
+    .container {
+        flex-direction: row; /* Disposición en fila */
+        align-items: center; /* Alinear elementos al centro */
+    }
+
+    .navbar-search {
+        margin-top: 0; /* Eliminar espaciado superior */
+    }
+    
+    .titleMain {
+        font-size: 2.5rem;
+    }
+    .navbar-items {
+        margin-right: 60px;
+        }
+}
+
+/* Media query para pantallas de escritorio (más de 1024px) */
+@media (min-width: 1024px) {
+    .navbar-items {
+        margin-right: 60px;
+        }
+}
+
+
+/*Estilos para about us*/
 .titulo {
     font-size: 5rem;
 }
@@ -13,7 +355,6 @@
 
 .containerNosotros {
     text-align: center;
-    margin-top: 8rem;
 }
 
 .containerNosotros img {
