@@ -336,3 +336,230 @@ width: 10rem;
         margin-right: 60px;
         }
 }
+/* contact Us  */
+
+.mainContainerContactUs {
+    background-color: #000000; 
+    height: 45rem;
+    padding-bottom: 10%;
+  }
+
+  .h4Información {
+    color: #000000;
+    text-shadow: #E0CCBE 2px 2px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .h4envianosunmensaje {
+    color: #000000;
+    text-shadow: #E0CCBE 2px 2px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .mapa {
+    width: 100%;
+    height: 63%;
+  }
+  
+  .iconoinfodecontacto {
+    padding-right: 1%;
+  }
+
+  .redesSociales {
+    text-align: center;
+padding: 2px;
+  }
+  
+  .contenedormayor {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+  
+  .h1contactate {
+    text-align: center;
+    color: #EEEDEB;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .spannombredelblogh1 {
+    color: #E0CCBE;
+  }
+  
+  .contenedorparahacercolumnas {
+    box-shadow: 0 0 5px 0 rgb(224, 204, 190);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 40rem;
+  }
+  
+  .contenedorinfodecontacto {
+    background-image: linear-gradient(#EEEDEB, #EEEDEB, #E0CCBE, #E0CCBE);
+    padding: 15px;
+  }
+  
+  .contenedorformulariodecontacto {
+    background-image: linear-gradient(#E0CCBE, #E0CCBE, #EEEDEB, #EEEDEB);
+    padding: 15px;
+  }
+  
+  .formdeenvianosunmensaje {
+    margin: 0;
+    padding: 2px;
+  }
+  
+  .inputform {
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid #E0CCBE;
+    background: none;
+    outline: none;
+    color: #EEEDEB;
+    margin-bottom: 5%;
+  }
+  
+  .textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #E0CCBE;
+    background: none;
+    outline: none;
+    color: #EEEDEB;
+  }
+  
+  .botondeenviar {
+    width: 100%;
+    background-color: #000000;
+    color: #E0CCBE;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+  }
+
+  .divdeimputytextarea input {
+  color: #000000;
+  }
+
+  .divdeimputytextarea textarea {
+    color: #000000;
+    }
+  
+  .botondeenviar:hover {
+    background-color: #E0CCBE;
+    color: #000000;
+  }
+  
+  .listadodeinformaciondecontacto {
+    list-style: none;
+    text-align: start;
+    padding: 0;
+  }
+  
+  .listadodeinformaciondecontacto i {
+    margin-right: 1%;
+  }
+  
+  .divparaacomodareltitulo {
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .informaciondecontactoyredessociales {
+display: grid;
+grid-template-columns: 1fr 1fr;
+font-size: medium;
+  }
+  
+  @media (max-width: 768px) {
+    .contenedorparahacercolumnas {
+      display: grid;
+      grid-template-columns: 1fr;
+      height: 74.8rem;
+    }
+  
+    .mapa {
+      width: 100%;
+      height: 55%;
+    }
+
+    .mainContainerContactUs {
+      height: 72rem;
+      padding-bottom: 50%; 
+    }
+
+    .divparaacomodareltitulo {
+      padding-left: 8%;
+      padding-right: 8%;
+      height: 70rem;
+  }
+
+    .sectionContainerContactUs {
+    height: 45rem;
+  }
+
+    .contenedorformulariodecontacto {
+      border-top: 1px solid #EEEDEB;
+      height: 35.5rem;
+    }
+
+    .contenedorinfodecontacto {
+    height: 35.5rem;
+    }
+
+    .botondeenviar {
+    margin-top: 5rem;
+    }
+
+.redesSociales {
+padding-top: 0.1rem;
+padding-bottom: 0.5rem;
+}
+
+.informaciondecontactoyredessociales {
+  grid-template-columns: 1fr;
+}
+
+.listadodeinformaciondecontacto {
+  text-align: center;
+}
+
+}
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  ::placeholder {
+    color: rgba(136, 135, 135, 0.815);
+    font-size: 1, 1em;
+    font-weight: 1000;
+  }
+  
+  .botonAdmin {
+    display: none;
+  }
+  
+  #botonCerrarSesion {
+    display: none;
+  }
