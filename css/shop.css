@@ -1,0 +1,185 @@
+/*Estilos Shop*/
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+
+  
+.mainShop{
+    width: 100%;
+}
+
+.shopTitle{
+    text-align: center;
+    font-size: 4em;
+}
+
+.containerShop{
+    display: flex;
+    justify-content: center;
+}
+.containerShop img{
+    width: 26em;
+    margin: 2px;
+    height: 40em;
+    transition: 0.10s ease;
+    backface-visibility: hidden;
+}
+
+.imagenShop:hover{
+    transition: 0.10s ;
+    filter: opacity(40%);
+}
+
+.item-shop{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.textoImagen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E0CCBE;
+    filter: drop-shadow(8px 8px 5px #747264);
+}
+
+.shopLinks {
+    color: #3C3633;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.sectionShop{
+    margin: 0 auto;
+    max-width: 70rem;
+    width: 100%;
+}
+
+.fraseShop{
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px 2px 5px #3C3633;
+    font-family: "Dancing Script", cursive;
+    font-style: normal;
+}
+      
+
+.shopSubtitle{
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px #3C3633;
+
+}
+
+.containerGaleriasVestidos{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4, auto);
+    grid-gap:2em; 
+    justify-content: center;
+}
+
+
+.containerGaleriasVestidos div{
+    width: 100%;
+    height: 100%;
+}
+
+.containerGaleriasVestidos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.containerGaleriasCalzado{
+    display: flex;
+    width: 100%;
+}
+
+
+.listaImagenes img{
+    width: 40%;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.listaImagenes{
+    display: flex;
+    width:100%;
+    align-content: center;
+    overflow-y: scroll;
+}
+
+.listaImagenes2 {
+    display: flex;
+    width:100%;
+    align-content: center;
+    overflow-y: scroll;
+}
+
+.listaImagenes2 img{
+    width: 25%;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.containerGaleriasAccesorios{
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:1em; 
+    justify-content: center;
+    margin: auto;
+}
+
+.containerGaleriasAccesorios img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Media query para dispositivos pequeños */
+
+@media (max-width: 768px){
+   
+    .containerGaleriasVestidos{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 1em; 
+        justify-content: center;
+    }
+
+    .shopTitle{
+        text-align: center;
+        font-size: 2em;
+        width: 100%;
+    
+    }
+    
+    .item-shop img{
+        width: 8em;
+        height: 12em;
+    }
+
+    .textoImagen{
+    font-size: medium;
+    }
+
+    .fraseShop{
+        text-align: center;
+        font-size: 2em;
+        text-shadow: 2px 2px 5px #3C3633;
+        font-family: "Dancing Script", cursive;
+        font-style: normal;
+    }
+
+    .shopSubtitle{
+        font-size: large;
+    }
+}
