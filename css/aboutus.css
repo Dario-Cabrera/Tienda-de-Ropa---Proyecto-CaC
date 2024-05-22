@@ -1,0 +1,72 @@
+.titulo {
+    font-size: 5rem;
+}
+
+.texto {
+    font-size: 1.5rem;
+}
+
+.texto1 {
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.containerNosotros {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.containerNosotros img {
+    text-align: center;
+    width: 100%;
+}
+
+.containerFilosofia {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.containerFilosofia img {
+    text-align: center;
+    width: 20%;
+}
+
+.containerConocenos {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.containerConocenos img {
+    text-align: center;
+    width: 30%;
+}
+
+.containerElegirnos {
+    text-align: center;
+    margin-top: 8rem;
+    
+}
+
+.containerElegirnos1 {
+    margin-left: 25rem;
+    
+}
+
+li {
+    list-style-type:square;
+}
+
+.containerElegirnos img {
+    text-align: center;
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+    .containerElegirnos1 {
+       margin: 0;
+    }
+    .titulo {
+        font-size: 3rem;
+    }
+    
+}
