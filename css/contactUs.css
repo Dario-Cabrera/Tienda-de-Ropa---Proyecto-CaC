@@ -447,8 +447,16 @@ padding: 2px;
     border-radius: 6px;
     transition: background-color 0.3s ease;
     font-weight: bold;
-    margin-top: 7%;
+    margin-top: 6%;
   }
+
+  .divdeimputytextarea input {
+  color: #000000;
+  }
+
+  .divdeimputytextarea textarea {
+    color: #000000;
+    }
   
   .botondeenviar:hover {
     background-color: #E0CCBE;
