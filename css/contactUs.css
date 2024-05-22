@@ -339,7 +339,9 @@ width: 10rem;
 /* contact Us  */
 
 .mainContainerContactUs {
-    background-color: #000000;  
+    background-color: #000000; 
+    height: 45rem;
+    padding-bottom: 10%;
   }
 
   .h4Información {
@@ -364,17 +366,24 @@ width: 10rem;
   .iconoinfodecontacto {
     padding-right: 1%;
   }
+
+  .redesSociales {
+    text-align: center;
+padding: 2px;
+  }
   
   .contenedormayor {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 12%;
+    height: 100%;
   }
   
   .h1contactate {
     text-align: center;
     color: #EEEDEB;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   
   .spannombredelblogh1 {
@@ -385,6 +394,7 @@ width: 10rem;
     box-shadow: 0 0 5px 0 rgb(224, 204, 190);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 40rem;
   }
   
   .contenedorinfodecontacto {
@@ -437,7 +447,7 @@ width: 10rem;
     border-radius: 6px;
     transition: background-color 0.3s ease;
     font-weight: bold;
-    font-size: ;
+    margin-top: 7%;
   }
   
   .botondeenviar:hover {
@@ -457,21 +467,70 @@ width: 10rem;
   
   .divparaacomodareltitulo {
     position: relative;
-    top: 103px;
-    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .informaciondecontactoyredessociales {
+display: grid;
+grid-template-columns: 1fr 1fr;
+font-size: medium;
   }
   
   @media (max-width: 768px) {
     .contenedorparahacercolumnas {
       display: grid;
       grid-template-columns: 1fr;
+      height: 74.8rem;
     }
   
     .mapa {
       width: 100%;
-      height: 45%;
+      height: 55%;
     }
+
+    .mainContainerContactUs {
+      height: 72rem;
+      padding-bottom: 50%; 
+    }
+
+    .divparaacomodareltitulo {
+      padding-left: 8%;
+      padding-right: 8%;
+      height: 70rem;
   }
+
+    .sectionContainerContactUs {
+    height: 45rem;
+  }
+
+    .contenedorformulariodecontacto {
+      border-top: 1px solid #EEEDEB;
+      height: 35.5rem;
+    }
+
+    .contenedorinfodecontacto {
+    height: 35.5rem;
+    }
+
+    .botondeenviar {
+    margin-top: 5rem;
+    }
+
+.redesSociales {
+padding-top: 0.1rem;
+padding-bottom: 0.5rem;
+}
+
+.informaciondecontactoyredessociales {
+  grid-template-columns: 1fr;
+}
+
+.listadodeinformaciondecontacto {
+  text-align: center;
+}
+
+}
   
   @keyframes fadeIn {
     0% {
