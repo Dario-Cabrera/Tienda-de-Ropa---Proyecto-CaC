@@ -3,18 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
-    <!--CSS-->
     <link rel="stylesheet" href="/css/contactUs.css" />
-    <title>Levona Fashion & Clothing - Contact Us</title>
+    <title>Levona - Contact Us</title>
     <link rel="icon" href="./img/icono/logoVerticalBlanco.ico" />
   </head>
   <body class="contact-page">
     <header>
-      <!--MENU SUPERIOR-->
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand">
@@ -23,8 +20,8 @@
           <div class="navbar-items">
             <ul class="navbar-nav">
               <li class="nav-item"><a href="./index.html" class="navbar-link">Home</a></li>
-              <li class="nav-item"><a href="#" class="navbar-link">About Us</a></li>
-              <li class="nav-item"><a href="#" class="navbar-link">Shop</a></li>
+              <li class="nav-item"><a href="./aboutus.html" class="navbar-link">About Us</a></li>
+              <li class="nav-item"><a href="./shop.html" class="navbar-link">Shop</a></li>
               <li class="nav-item"><a href="./contactUs.html" class="navbar-link">Contact Us</a></li>
             </ul>
           </div>
@@ -38,19 +35,20 @@
       <section class="sectionContainerContactUs">
         <div class="divparaacomodareltitulo">
           <div class="contenedormayor">
-            <h1 class="h1contactate"> Contactate con <span class="spannombredelblogh1">Levona</span> </h1>
+            <h1 class="h1contactate"> Contact <span class="spannombredelblogh1">Levona</span> </h1>
             <div class="contenedorparahacercolumnas">
               <div class="contenedorinfodecontacto">
-                <h4 class="h4Información">Información</h4>
+                <h4 class="h4Información">Information</h4>
                 <div class="informaciondecontactoyredessociales">
                   <ul class="listadodeinformaciondecontacto">
-                    <li class="itemlistadodeinformaciondecontacto"><img class="iconoinfodecontacto" alt="" />3815120555 </li>
-                    <li class="itemlistadodeinformaciondecontacto"><img class="iconoinfodecontacto" alt="" />levona@levona.corp.com </li>
-                    <li class="itemlistadodeinformaciondecontacto"><img class="iconoinfodecontacto" alt="" />Lunes a Viernes - 08:00 a 19:00 </li>
-                    <li class="itemlistadodeinformaciondecontacto"><img class="iconoinfodecontacto" alt="" />Av. Colón 147, San Miguel de Tucumán, Tucumán</li>
+                    <li class="itemlistadodeinformaciondecontacto">3815120555</li>
+                    <li class="itemlistadodeinformaciondecontacto">levona@levona.corp.com</li>
+                    <li class="itemlistadodeinformaciondecontacto">Monday to Friday - 08:00 to 16:00</li>
+                    <li class="itemlistadodeinformaciondecontacto">Saturday: 08:00 to 12:00</li>
+                    <li class="itemlistadodeinformaciondecontacto">Av. Colón 147, San Miguel de Tucumán, Tucumán</li>
                   </ul>
                   <div class="redesSociales">
-                    <p>Seguinos en nuestras redes!</p>
+                    <p>Follow Us!</p>
                     <a href="https://www.facebook.com/LevonaFashion&Clothing" target="_blank"
                       ><img src="https://i.ibb.co/WGr2GVn/facebook-5968973-NEGRO.png" width="29" height="29" alt="Facebook"
                     /></a>
@@ -72,23 +70,26 @@
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
-              <!-- PARTE DEL FORMULARIOS DE CONTACTO "DERECHA" -->
               <div class="contenedorformulariodecontacto">
-                <h4 class="h4envianosunmensaje">Envianos un mensaje!</h4>
+                <h4 class="h4envianosunmensaje">Send us a message</h4>
                 <form id="contactForm" class="formdeenvianosunmensaje">
                   <div class="divdeimputytextarea">
-                    <input type="text" id="name" class="inputform" placeholder="Name" required />
-                    <input type="text" id="lastname" class="inputform" placeholder="Lastname" required />
-                    <input type="text" id="phone" class="inputform" placeholder="Phone" required />
-                    <input type="email" id="email" class="inputform" placeholder="Email" required />
-                    <textarea id="message" name="Mensaje" placeholder="Write your message here" class="textarea" cols="30" rows="10" required></textarea>
+                    <input type="text" id="name" class="inputform" placeholder="Name" />
+                    <p id="nameError" class="error-message"></p>
+                    <input type="text" id="lastname" class="inputform" placeholder="Lastname" />
+                    <p id="lastnameError" class="error-message"></p>
+                    <input type="number" id="phone" class="inputform" placeholder="Phone" />
+                    <p id="phoneError" class="error-message"></p>
+                    <input type="email" id="email" class="inputform" placeholder="Email" />
+                    <p id="emailError" class="error-message"></p>
+                    <textarea id="message" name="Mensaje" placeholder="Write your message here" class="textarea" cols="30" rows="10"></textarea>
+                    <p id="messageError" class="error-message"></p>
                   </div>
                   <div class="divdeboton">
-                    <button type="submit" class="botondeenviar"><b>ENVIAR</b></button>
+                    <button type="submit" class="botondeenviar"><b>SUBMIT</b></button>
                   </div>
                 </form>
               </div>
-              <!-- PARTE DEL FORMULARIOS DE CONTACTO "DERECHA" -->
             </div>
           </div>
         </div>
@@ -98,26 +99,26 @@
       <div class="footerDivContainer">
         <div class="footerItemContainer">
           <div class="footerDivItem">
-            <h4 class="footerLink">Atención</h4>
+            <h4 class="footerLink">Find Us</h4>
             <h6>Av. Colón 147</h6>
-            <h6>Lunes a Viernes: 08:00 a 16:00</h6>
-            <h6>Sábados: 08:00 a 12:00</h6>
+            <h6>Monday to Friday: 08:00 to 16:00</h6>
+            <h6>Saturday: 08:00 to 12:00</h6>
           </div>
           <div class="footerDivItem">
-            <h4 class="footerLink">Redes Sociales</h4>
+            <h4 class="footerLink">Social Media</h4>
             <a href="https://www.facebook.com/LevonaFashion&Clothing" target="_blank">
-              <img src="https://i.ibb.co/svX8BYY/facebook-5968973-BLANCO.png" width="29" height="29" />
+              <img src="https://i.ibb.co/svX8BYY/facebook-5968973-BLANCO.png" width="29" height="29" alt="Icono Facebook" />
             </a>
             <a href="https://www.instagram.com/LevonaFashion&Clothing" target="_blank">
-              <img src="https://i.ibb.co/xs2KJMx/instagram-5968982-BLANCO.png" width="29" height="29" />
+              <img src="https://i.ibb.co/xs2KJMx/instagram-5968982-BLANCO.png" width="29" height="29" alt="Icono Instagram" />
             </a>
             <a href="https://www.whatsapp.com/LevonaFashion&Clothing" target="_blank">
-              <img src="https://i.ibb.co/s6fQm49/whatsapp-5969035-BLANCO.png" width="29" height="29" />
+              <img src="https://i.ibb.co/s6fQm49/whatsapp-5969035-BLANCO.png" width="29" height="29" alt="Icono Whatsapp" />
             </a>
           </div>
         </div>
         <div class="footerDivItem">
-          <img class="footerLogo" src="/img/logoVerticalBlanco.png" alt="" />
+          <img class="footerLogo" src="/img/logoVerticalBlanco.png" alt="LogoFooter" />
         </div>
       </div>
     </footer>
