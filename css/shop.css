@@ -1,47 +1,41 @@
-/*Estilos NavBar y Footer*/
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Fondo de toda la página */
-    overflow-x: hidden; /* Ocultar el desbordamiento horizontal en dispositivos pequeños */
+    background-color: #ffffff; 
+    overflow-x: hidden; 
     width: 100%;   
 }
 
-/* Patrones Generales */
-/* Google Font */
 * {
     font-family: "Abel", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-/* Contenedor Principal */
 .mainContainer {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Establecer la altura mínima para que el contenedor principal abarque toda la altura de la ventana */
+    min-height: 100vh; 
     position: relative;
     max-height: 200vh;
 }
 
-/* Contenedor de Sección */
 .sectionContainer {
-    height: 100vh; /* Asegurar que la sección ocupe toda la altura de la ventana */
+    height: 100vh; 
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center; 
+    align-items: center; 
     padding: 0;
     margin: 0;
     background-color: #000000;
-    position: relative; /* Para que el título pueda posicionarse absolutamente */
-    background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Ajustar la imagen para que cubra todo el contenedor */
-    background-position: center; /* Centrar la imagen */
-    animation: changeBackground 15s infinite; /* Añadir animación */
+    position: relative; 
+    background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    animation: changeBackground 15s infinite; 
     padding-top: 150px;
 }
 
-/* Animación para cambiar el fondo */
 @keyframes changeBackground {
     0% {
         background-image: url('/img/fotoCentral/pexels-terje-sollie-313707.jpg');
@@ -91,7 +85,6 @@ body, html {
     font-weight: bold;
 }
 
-
 .sectionContainer-item {
     display: flex;
     flex-direction: column;
@@ -102,25 +95,24 @@ body, html {
     margin-bottom: 20px;
 }
 
-/* Estilos para el navbar */
 .container {
-    width: 100%; /* Ancho máximo para el contenedor */
+    width: 100%; 
     display: flex;
-    justify-content: space-between; /* Espacio entre los elementos del navbar */
+    justify-content: space-between; 
     align-items: center;
 }
 
 .navbar {
-    background-color: #E0CCBE; /* Color de fondo del navbar */
-    padding: 1rem; /* Espaciado interior */
+    background-color: #E0CCBE; 
+    padding: 1rem; 
     display: flex;
-    justify-content: space-between; /* Espacio entre los elementos del navbar */
+    justify-content: space-between; 
     align-items: center;
 }
 
 .navbar-brand {
-    text-decoration: none; /* Eliminar subrayado del enlace */
-    display: flex; /* Alinear el logo y el nombre de la marca */
+    text-decoration: none; 
+    display: flex; 
     align-items: center;
 }
 
@@ -129,40 +121,40 @@ width: 10rem;
 }
 
 .logoNav {
-    width: 100%; /* Ancho de la imagen del logo */
-    margin-right: 1rem; /* Espaciado entre el logo y el nombre de la marca */
+    width: 100%; 
+    margin-right: 1rem; 
 }
 
 .navbar-nav {
-    list-style: none; /* Eliminar viñetas de la lista */
+    list-style: none; 
     display: flex;
 }
 
 .nav-item {
-    margin-right: 1rem; /* Espaciado entre elementos */
+    margin-right: 1rem; 
 }
 
 .navbar-link {
-    text-decoration: none; /* Eliminar subrayado del enlace */
-    font-size: 1.2rem; /* Tamaño de fuente */
-    font-weight: bold; /* Grosor de la fuente */
-    transition: color 0.3s ease; /* Transición suave del color */
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
     color: #747264;
 }
 
 .navbar-link:hover {
-    color: #3C3633; /* Cambio de color al pasar el ratón */
+    color: #3C3633; 
 }
 
 .navbar-search {
     display: flex;
-    align-items: center; /* Alinear verticalmente los elementos del navbar */
+    align-items: center;
 }
 
 .search-input {
-    padding: 0.5rem; /* Espaciado interno */
-    border: 2px solid #747264; /* Borde del input */
-    border-radius: 0.25rem; /* Borde redondeado */
+    padding: 0.5rem; 
+    border: 2px solid #747264; 
+    border-radius: 0.25rem; 
     background-color: #E0CCBE;
     color: #000000;
 }
@@ -173,24 +165,21 @@ width: 10rem;
     font-weight: bold;
 }
 
-/* Footer */
 .footerContainer {
-    background-color: #000000; /* Color de fondo del footer */
-    color: #ffffff; /* Color del texto del footer */
-    padding: 10px 0; /* Espaciado interno del footer */
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 10px 0; 
     width: 100%;
     margin-top: auto;
     border-top: solid 1px #E0CCBE;
 }
 
-/* Contenedor del Footer */
 .footerDivContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Elementos del Footer */
 .footerItemContainer {
     display: flex;
     flex-direction: row;
@@ -216,7 +205,6 @@ width: 10rem;
     text-decoration: none;
 }
 
-/* Logo del Footer */
 .footerLogo {
     width: 250px;
     margin-right: 20px;
@@ -228,15 +216,14 @@ width: 10rem;
 }
 
 
-/* Media query para dispositivos móviles (hasta 768px) */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Cambiar a disposición de columna en dispositivos pequeños */
-        align-items: flex-start; /* Alinear los elementos a la izquierda */
+        flex-direction: column; 
+        align-items: flex-start; 
     }
 
     .navbar-brand {
-        margin-bottom: 1rem; /* Espaciado inferior entre el logo y los enlaces */
+        margin-bottom: 1rem; 
     }
 
     .navbar-brand img {
@@ -244,22 +231,21 @@ width: 10rem;
     }
 
     .navbar-nav {
-        width: 100%; /* Asegurar que ocupen el ancho completo */
+        width: 100%; 
     }
 
     .navbar-link {
-        margin-bottom: 0.5rem; /* Espacio entre elementos en dispositivos pequeños */
+        margin-bottom: 0.5rem; 
     }
 
     .search-input {
-        margin-top: 0.5rem; /* Espaciado superior */
+        margin-top: 0.5rem; 
     }
 
     .footerLogo {
-        display: none; /* Ocultar la imagen del logo en dispositivos pequeños */
+        display: none; 
     }
 
-    /* Centrar elementos del footer en dispositivos pequeños */
     .footerDivContainer {
         text-align: center;
         padding: auto;
@@ -269,12 +255,12 @@ width: 10rem;
     }
 
     .container {
-        flex-direction: column; /* Cambiar a disposición de columna en dispositivos pequeños */
-        align-items: flex-center; /* Alinear los elementos a la izquierda */
+        flex-direction: column;
+        align-items: flex-center; 
     }
 
     .navbar-search {
-        margin-top: 1rem; /* Espaciado superior */
+        margin-top: 1rem; 
     }
     
     .titleMain {
@@ -286,41 +272,40 @@ width: 10rem;
     }
 }
 
-/* Media query para tabletas (entre 768px y 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .navbar {
-        flex-direction: row; /* Disposición en fila */
-        align-items: start; /* Alinear los elementos al centro */
+        flex-direction: row; 
+        align-items: start; 
     }
 
     .navbar-brand {
-        width: 20%; /* Ajustar tamaño del logo */
+        width: 20%; 
     }
 
     .navbar-brand img {
-        width: 100%; /* Ajustar tamaño del logo */
+        width: 100%; 
     }
 
     .navbar-nav {
-        width: auto; /* Ajustar el ancho */
+        width: auto; 
     }
 
     .navbar-link {
-        margin-bottom: 0; /* Eliminar espacio entre elementos */
+        margin-bottom: 0; 
     }
 
     .footerDivContainer {
-        text-align: left; /* Alinear texto a la izquierda */
-        justify-content: space-between; /* Distribuir espacio entre elementos */
+        text-align: left; 
+        justify-content: space-between;
     }
 
     .container {
-        flex-direction: row; /* Disposición en fila */
-        align-items: center; /* Alinear elementos al centro */
+        flex-direction: row;
+        align-items: center; 
     }
 
     .navbar-search {
-        margin-top: 0; /* Eliminar espaciado superior */
+        margin-top: 0; 
     }
     
     .titleMain {
@@ -331,14 +316,12 @@ width: 10rem;
         }
 }
 
-/* Media query para pantallas de escritorio (más de 1024px) */
 @media (min-width: 1024px) {
     .navbar-items {
         margin-right: 60px;
         }
 }
 
-/*Estilos Shop*/
 html{
     scroll-behavior: smooth;
     width: 100%;
@@ -407,12 +390,14 @@ html{
     font-style: normal;
 }
       
-
 .shopSubtitle{
     text-align: center;
     font-size: 2em;
     text-shadow: 2px 2px 5px #3C3633;
+}
 
+.subtitleShoes{
+    padding-top: 3em;
 }
 
 .containerGaleriasVestidos{
@@ -420,10 +405,10 @@ html{
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(4, auto);
-    grid-gap:2em; 
+    grid-column-gap:2em;
+    grid-row-gap: 7em; 
     justify-content: center;
 }
-
 
 .containerGaleriasVestidos div{
     width: 100%;
@@ -434,37 +419,56 @@ html{
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
+.divButtonShop{
+    text-align: center;
+}
+
+.buttonPrecio{
+    border: none; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    margin: 5px;
+    background-color: #E0CCBE; 
+    font-size: 20px;
+}
+
+.buttonPrecio:hover {background: #eee1d8;}
+  
 .containerGaleriasCalzado{
     display: flex;
     width: 100%;
 }
 
-
 .listaImagenes img{
-    width: 40%;
+    width: 30%;
     object-fit: cover;
-    padding: 5px;
+    margin: auto;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-around;
 }
 
 .listaImagenes{
     display: flex;
     width:100%;
     align-content: center;
-    overflow-y: scroll;
 }
 
 .listaImagenes2 {
     display: flex;
     width:100%;
     align-content: center;
-    overflow-y: scroll;
+    margin: auto;
+    padding-top: 5em;
 }
 
 .listaImagenes2 img{
-    width: 25%;
+    width: 19%;
     object-fit: cover;
     padding: 5px;
 }
@@ -476,7 +480,9 @@ html{
     grid-gap:1em; 
     justify-content: center;
     margin: auto;
-
+    grid-column-gap:2em;
+    grid-row-gap: 7em; 
+    padding-bottom: 8em;
 }
 
 .containerGaleriasAccesorios img{
@@ -484,8 +490,6 @@ html{
     height: 100%;
     object-fit: cover;
 }
-
-/*Media query para dispositivos pequeños */
 
 @media (max-width: 768px){
    
@@ -501,7 +505,6 @@ html{
         text-align: center;
         font-size: 2em;
         width: 100%;
-    
     }
     
     .item-shop img{
