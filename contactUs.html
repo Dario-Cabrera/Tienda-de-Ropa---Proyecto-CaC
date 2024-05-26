@@ -82,8 +82,24 @@
                     <p id="phoneError" class="error-message"></p>
                     <input type="email" id="email" class="inputform" placeholder="Email" />
                     <p id="emailError" class="error-message"></p>
+                    <select id="contactReason" name="contactReason" class="select-motivo">
+                      <option value="query">Reason for Contact</option>
+                      <option value="feedback">Feedback</option>
+                      <option value="complaint">Complaint</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <p id="contactReasonError" class="error-message"></p>
                     <textarea id="message" name="Mensaje" placeholder="Write your message here" class="textarea" cols="30" rows="10"></textarea>
                     <p id="messageError" class="error-message"></p>
+                    <div class="checkAndImage"
+                      ><div class="checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe" />
+                        <label for="subscribe">Subscribe to our newsletter</label>
+                      </div>
+                      <p id="subscribeError" class="error-message"></p>
+                      <p id="contactReasonError" class="error-message"></p>
+                      <img src="/img/logoVertical.png" alt="Contact Image" class="imagen-formulario" />
+                    </div>
                   </div>
                   <div class="divdeboton">
                     <button type="submit" class="botondeenviar"><b>SUBMIT</b></button>
