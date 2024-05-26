@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = document.getElementById("phone").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
+    const reason = document.getElementById("contactReason").value;
 
     const nameRegex = /^[A-Za-z\s]{3,}$/;
     const lastnameRegex = /^[A-Za-z\s]+$/;
@@ -42,6 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!messageRegex.test(message)) {
       showError("messageError", "Please enter a message (up to 500 characters).");
+      hasError = true;
+    }
+
+    if (reason === "" || reason === "query") {
+      showError("contactReasonError", "Please select a reason for contact.");
       hasError = true;
     }
 
