@@ -25,8 +25,22 @@
               <li class="nav-item"><a href="./contactUs.html" class="navbar-link">Contact Us</a></li>
             </ul>
           </div>
-          <div class="navbar-search">
-            <input type="text" class="search-input" placeholder="Search for your product..." />
+          <div class="containerBotonesCuenta">
+            <div class="navbar-search">
+              <input type="text" class="search-input" placeholder="Search for your product..." />
+            </div>
+            <div class="divBotonLogin">
+              <a href="login.html"><button id="botonLogin" type="submit" class="botonLogin">LogIn</button></a>
+            </div>
+            <div class="divLogoMiCuenta">
+              <div class="divLogoMiCuentaImg">
+                <button id="logoMiCuenta" type="submit" class="logoMiCuenta"><img src="./img/micuentaicono/perfil-del-usuario.png" alt="micuenta" /></button>
+              </div>
+              <div id="dropdownMiCuenta" class="dropdown-content">
+                <a href="updateData.html"><button>Update Data</button></a>
+                <a href="logout.html"><button>LogOut</button></a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -66,5 +80,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
