@@ -263,7 +263,20 @@ html {
     }
 
     .navbar-search {
-        margin-top: 1rem;
+        margin-top: 0.3rem;
+        height: 20px;
+    }
+
+    .divBotonLogin {
+        margin-top: 0.8rem;
+    }
+
+    .containerBotonesCuenta {
+padding-top: 1rem;
+    }
+
+    .divLogoMiCuenta {
+        padding-top: 1rem;
     }
 
     .titleMain {
@@ -866,6 +879,93 @@ html {
     height: 100%;
     object-fit: cover;
 }
+
+.divBotonLogin {
+    margin-bottom: 0.25rem;
+}
+
+.botonLogin {
+    width: 100%;
+    background-color: #000000;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+.botonLogin:hover {
+    background-color: #e0ccbe;
+    color: #000000;
+}
+
+.divLogoMiCuenta {
+    margin-top: 0.15rem;
+}
+
+.logoMiCuenta {
+    background-color: #e0ccbe;
+    border: none;
+    cursor: pointer;
+}
+
+
+.logoMiCuenta img {
+    width: 30px; 
+    height: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 78px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    width: 100%;
+    text-align: center;
+    padding: 4px 6px;
+    border: solid 0.1px #3C3633;
+    border-radius: 2px;
+    background-color: #000000;
+    color: #e0ccbe;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #e0ccbe;
+    color: #000000;
+}
+
+.containerBotonesCuenta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding-right: 0.5rem;
+}
+
+.divLogoMiCuentaImg {
+margin-left: 20px;
+}
+
+.divLogoMiCuentaImg img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 
 @media (max-width: 768px) {
 
