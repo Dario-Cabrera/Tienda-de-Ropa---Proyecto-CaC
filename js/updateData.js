@@ -1,15 +1,15 @@
-const formRegister = document.getElementById("formRegister");
-const inputName = document.getElementById("nameRegister");
-const inputSurname = document.getElementById("surnameRegister");
-const inputEmail = document.getElementById("emailRegister");
-const inputPassword = document.getElementById("passwordInput");
-const inputPhone = document.getElementById("phoneRegister");
-const inputId = document.getElementById("idRegister");
-const inputAddress = document.getElementById("addressRegister");
-const inputState = document.getElementById("stateRegister");
+const formUpdateData = document.getElementById("formUpdateData");
+const inputName = document.getElementById("nameUpdateData");
+const inputSurname = document.getElementById("surnameUpdateData");
+const inputEmail = document.getElementById("emailUpdateData");
+const inputPassword = document.getElementById("passwordInputUpdateData");
+const inputPhone = document.getElementById("phoneUpdateData");
+const inputId = document.getElementById("idUpdateData");
+const inputAddress = document.getElementById("addressUpdateData");
+const inputState = document.getElementById("stateUpdateData");
 
-const modalRegister = document.getElementById("successModal");
-const spanRegister = document.getElementsByClassName("closeRegister")[0];
+const modalUpdateData = document.getElementById("successModal");
+const spanUpdateData = document.getElementsByClassName("closeUpdateData")[0];
 
 const logoMiCuenta = document.getElementById("logoMiCuenta");
 const dropdownMiCuenta = document.getElementById("dropdownMiCuenta");
@@ -24,8 +24,8 @@ document.addEventListener("click", function (event) {
 });
 
 //Hide/show password
-document.getElementById("togglePassword").addEventListener("click", function () {
-  let passwordField = document.getElementById("passwordInput");
+document.getElementById("togglePasswordUpdateData").addEventListener("click", function () {
+  let passwordField = document.getElementById("passwordInputUpdateData");
   if (passwordField.type === "password") {
     passwordField.type = "text";
   } else {
@@ -34,12 +34,12 @@ document.getElementById("togglePassword").addEventListener("click", function () 
 });
 
 //Form validation
-formRegister.addEventListener("submit", (e) => {
+formUpdateData.addEventListener("submit", (e) => {
   //Prevent from submission
   e.preventDefault();
 
   //Clear previous error messages
-  let errors = document.querySelectorAll(".errorRegister");
+  let errors = document.querySelectorAll(".errorUpdateData");
   errors.forEach(function (error) {
     error.textContent = "";
   });
@@ -101,21 +101,21 @@ formRegister.addEventListener("submit", (e) => {
   // If form is valid, show modal
   if (isValid) {
     // document.getElementById('formRegister').submit();
-    modalRegister.style.display = "block";
+    modalUpdateData.style.display = "block";
   }
 });
 
 // Close modal when click on <span> (x)
-spanRegister.onclick = function () {
-  modalRegister.style.display = "none";
+spanUpdateData.onclick = function () {
+  modalUpdateData.style.display = "none";
   // Redirigir a la página principal
   window.location.href = "index.html";
 };
 
 //close modal when click outside the modal
 window.onclick = function (event) {
-  if (event.target == modalRegister) {
-    modalRegister.style.display = "none";
+  if (event.target == modalUpdateData) {
+    modalUpdateData.style.display = "none";
     // Redirigir a la página principal
     window.location.href = "index.html";
   }
