@@ -966,6 +966,148 @@ margin-left: 20px;
     transform: scale(1.1);
 }
 
+.formRegister{
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.titleRegister{
+    text-align: center;
+    font-size: 4em;
+    color: #3C3633;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+  
+.bodyRegister{
+    background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+} 
+
+.mainRegister{
+   background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+   border-top: 5px double #3C3633;
+   padding-bottom: 5em;
+}
+
+.submitRegister{
+    background-color: #000000;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+.submitRegister:hover{
+    background-color: #e0ccbe;
+    color: #000000;
+
+}
+.formRegister button, label, input, select{
+    display: block;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%; 
+    margin: 0;
+}
+.password-input-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.password-input {
+    width: 100%;
+    padding-right: 30px; 
+    box-sizing: border-box; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none; 
+} 
+
+.formRegister input, 
+select{
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+.formRegister label{
+  margin-bottom: 5px;
+}
+
+
+.errorRegister{
+  width: 200px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.modalRegister {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modalContent {
+    background-color: #3C3633;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.closeRegister {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeRegister:hover,
+.closeRegister:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
 
@@ -1004,3 +1146,36 @@ margin-left: 20px;
         font-size: large;
     }
 }
+
+/* 
+
+    
+  input[type="text" ], 
+  select{
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="password" ]{
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+  } 
+  
+  label{
+    margin-bottom: 5px;
+  }
+    
+  button{
+    width: 60%;
+    margin: 0 auto; 
+  }
+  
+  .error{
+    width: 200px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    
+  }
+  
+  
