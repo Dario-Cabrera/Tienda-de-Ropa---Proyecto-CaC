@@ -7,10 +7,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
-  <title>Levona - Register</title>
+  <title>Levona - Update Data</title>
   <link rel="icon" href="./img/icono/logoVerticalBlanco.ico" />
 </head>
-<body id="bodyRegister" class="bodyRegister">
+<body id="bodyUpdateData" class="bodyUpdateData">
     <header>
         <nav class="navbar">
           <div class="container">
@@ -45,51 +45,51 @@
           </div>
         </nav>
       </header>
-    <main class="mainRegister">
-    <section class="sectionContainerRegister">
-    <h1 id="titleRegister" class="titleRegister">Register now!</h1>
-    <form id="formRegister" class="formRegister" method="post">
+    <main class="mainUpdateData">
+    <section class="sectionContainerUpdateData">
+    <h1 id="titleUpdateData" class="titleUpdateData">Update Data</h1>
+    <form id="formUpdateData" class="formUpdateData" method="post">
     <p>
       <label for="name">First Name: </label>
-      <input id="nameRegister" name="nameRegister" type="text" placeholder="Please enter your First Name" />
-      <span id="nameError" class="errorRegister"></span>
+      <input id="nameUpdateData" name="nameUpdateData" type="text" placeholder="Please enter your First Name" />
+      <span id="nameError" class="errorUpdateData"></span>
     </p>
     <p>
       <label for="surname">Surname: </label>
-      <input id="surnameRegister" name="surnameRegister" type="text" placeholder="Please enter your Surname" />
-      <span id="surnameError" class="errorRegister"></span>
+      <input id="surnameUpdateData" name="surnameUpdateData" type="text" placeholder="Please enter your Surname" />
+      <span id="surnameError" class="errorUpdateData"></span>
     </p>
     <p>
       <label for="email">Email: </label>
-      <input id="emailRegister" name="emailRegister" type="text" placeholder="example@example.com"/>
-      <span id="emailError" class="errorRegister"></span>
+      <input id="emailUpdateData" name="emailUpdateData" type="text" placeholder="example@example.com"/>
+      <span id="emailError" class="errorUpdateData"></span>
     </p>
-    <p class="password-container">
-        <label for="passwordInput">Password: </label>
-        <div class="password-input-wrapper">
-          <input id="passwordInput" type="password" class="password-input" placeholder="Please create your Password">
-          <span id="togglePassword" class="toggle-password">👁️</span>
+    <p class="passwordContainerUpdateData">
+        <label for="passwordInputUpdateData">Password: </label>
+        <div class="passwordInputWrapperUpdateData">
+          <input id="passwordInputUpdateData" type="password" class="passwordInputUpdateData" placeholder="Please create your Password">
+          <span id="togglePasswordUpdateData" class="togglePasswordUpdateData">👁️</span>
         </div>
-        <span id="passwordError" class="errorRegister"></span>
+        <span id="passwordError" class="errorUpdateData"></span>
     </p>
     <p>
       <label for="phone">Mobile phone: </label>
-      <input id="phoneRegister" name="phoneRegister" type="text" placeholder="Please enter your Phone (only numbers)"/>
-      <span id="phoneError" class="errorRegister"></span>
+      <input id="phoneUpdateData" name="phoneUpdateData" type="text" placeholder="Please enter your Phone (only numbers)"/>
+      <span id="phoneError" class="errorUpdateData"></span>
     </p>
     <p>
       <label for="id">ID Number: </label>
-      <input id="idRegister" name="idRegister" type="text" placeholder="Please enter your ID Number (only numbers)"/>
-      <span id="idError" class="errorRegister"></span>
+      <input id="idUpdateData" name="idUpdateData" type="text" placeholder="Please enter your ID Number (only numbers)"/>
+      <span id="idError" class="errorUpdateData"></span>
     </p>
     <p>
       <label for="address">Address: </label>
-      <input id="addressRegister" name="addressRegister" type="text" placeholder="Please enter your complete Street Name and Number"/>
-      <span id="addressError" class="errorRegister"></span>
+      <input id="addressUpdateData" name="addressUpdateData" type="text" placeholder="Please enter your complete Street Name and Number"/>
+      <span id="addressError" class="errorUpdateData"></span>
     </p>
     <p>
       <label for="state">Province/State: </label>
-      <select name="stateRegister" id="stateRegister">
+      <select name="stateUpdateData" id="stateUpdateData">
         <option value="default">Select your province/state</option>
         <option value="op1">CABA</option>
         <option value="op2">Buenos Aires</option>
@@ -116,15 +116,15 @@
         <option value="op23">Tierra del Fuego</option>
         <option value="op24">Tucumán</option>
       </select>
-      <span id="stateError" class="errorRegister"></span>
+      <span id="stateError" class="errorUpdateData"></span>
     </p>
-    <button id="submitRegister" class="submitRegister" type="submit">Submit</button>
-    <p id="error" class="errorRegister"></p>
+    <button id="submitUpdateData" class="submitUpdateData" type="submit">Update</button>
+    <p id="error" class="errorUpdateData"></p>
 <!-- Modal -->
-<div id="successModal" class="modalRegister">
+<div id="successModal" class="modalUpdateData">
   <div class="modalContent">
-      <span class="closeRegister">&times;</span>
-      <p>Registration complete!</p>
+      <span class="closeUpdateData">&times;</span>
+      <p>Update complete!</p>
       <p>You'll be redirected to our Homepage</p> 
   </div>
 </div>
@@ -158,6 +158,6 @@
     </div>
   </div>
 </footer>
-<script src="/js/register.js"></script>
+<script src="/js/updateData.js"></script>
 </body>
 </html>
