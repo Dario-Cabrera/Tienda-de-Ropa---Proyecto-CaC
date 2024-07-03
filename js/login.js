@@ -5,7 +5,7 @@ const modalLogIn = document.getElementById("successModalLogIn");
 const spanLogIn = document.getElementsByClassName("closeLogIn")[0];
 const submitSignUp = document.getElementById("submitSignUp");
 
-//Hide/show password
+// Hide/show password
 document.getElementById("togglePassword").addEventListener("click", function () {
   let passwordField = document.getElementById("passwordInput");
   if (passwordField.type === "password") {
@@ -15,59 +15,110 @@ document.getElementById("togglePassword").addEventListener("click", function () 
   }
 });
 
-//Form validation
-formLogIn.addEventListener("submit", (e) => {
-  //Prevent from submission
+// Function to fetch user by email
+async function fetchUserByEmail(email) {
+  const baseUrl = "https://dariocabrera10.pythonanywhere.com"; // Reemplaza con tu URL base del backend
+  const response = await fetch(`${baseUrl}/api/users/${email}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Error fetching user. Please try again later.");
+  }
+
+  return response.json();
+}
+
+// Form validation
+formLogIn.addEventListener("submit", async (e) => {
+  // Prevent form submission
   e.preventDefault();
 
-  //Clear previous error messages
+  // Clear previous error messages
   let errors = document.querySelectorAll(".errorLogIn");
   errors.forEach(function (error) {
     error.textContent = "";
   });
 
-  //Validation variables
+  // Validation variables
   let isValid = true;
 
-  //Validate Email
+  // Validate Email
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
   if (inputEmail.value.trim() === "" || !regexEmail.test(inputEmail.value)) {
     document.getElementById("emailError").textContent = "Please enter a valid email address.";
     isValid = false;
   }
 
-  //Validate password
+  // Validate password
   if (inputPassword.value.length < 8) {
     document.getElementById("passwordError").textContent = "Please enter a valid password (8 characters min.)";
     isValid = false;
   }
 
-  // If form is valid, show modal
+  // If form is valid, capture email and password values
   if (isValid) {
-    // document.getElementById('formRegister').submit();
-    modalLogIn.style.display = "block";
+    // Capture email and password values
+    const emailLogin = inputEmail.value;
+    const passwordLogin = inputPassword.value;
+
+    // Log the captured values to the console
+    console.log("Email:", emailLogin);
+    console.log("Password:", passwordLogin);
+
+    try {
+      // Fetch user by email
+      const user = await fetchUserByEmail(emailLogin);
+      console.log("User fetched from DB:", user);
+
+      // Save the password from the fetched user in a variable
+      const verificacionPassword = user.password;
+
+      // Log the password for verification
+      console.log("Password from DB:", verificacionPassword);
+
+      // You can now compare the fetched user data with the entered password or take other actions
+      if (verificacionPassword === passwordLogin) {
+        console.log("Login successful!");
+
+        // Save user ID in localStorage
+        localStorage.setItem("id", user.id_user);
+
+        // Show modal or redirect to another page
+        modalLogIn.style.display = "block";
+      } else {
+        console.log("Incorrect password");
+        document.getElementById("passwordError").textContent = "Incorrect password.";
+      }
+    } catch (error) {
+      console.error("Error fetching user:", error);
+      document.getElementById("error").textContent = "User not found. Please register.";
+    }
   }
 });
 
 // Close modal when click on <span> (x)
 spanLogIn.onclick = function () {
   modalLogIn.style.display = "none";
-  // Redirigir a la página principal
+  // Redirect to homepage
   window.location.href = "index.html";
 };
 
-//close modal when click outside the modal
+// Close modal when click outside the modal
 window.onclick = function (event) {
   if (event.target == modalLogIn) {
     modalLogIn.style.display = "none";
-    // Redirigir a la página principal
+    // Redirect to homepage
     window.location.href = "index.html";
   }
 };
 
-document.getElementById("submitSignUp").addEventListener("click", function (event) {
-  event.preventDefault(); // Evita el comportamiento predeterminado del botón (enviar el formulario)
+submitSignUp.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default button behavior (form submission)
 
-  // Redirige a la página de registro
+  // Redirect to the registration page
   window.location.href = "register.html";
 });
