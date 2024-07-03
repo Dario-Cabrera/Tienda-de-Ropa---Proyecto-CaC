@@ -1263,7 +1263,7 @@ select{
 .mainLogIn {
     background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
     border-top: 5px double #3C3633;
-    padding-bottom: 5em;
+    padding-bottom: 12.25em;
  }
 
  .sectionContainerLogIn {
@@ -1299,6 +1299,12 @@ select{
     margin-top: 40px;
 }
 
+.submitSignUp {
+    background-color: #e0ccbe;
+    color: #000000;
+    margin-top: 40px;
+}
+
 .email-containerLogIn {
     display: flex;
     flex-direction: column;
@@ -1311,7 +1317,7 @@ select{
 }
 
 .errorLogIn {
-    width: 200px;
+    width: 100%;
     text-align: center;
     color: red;
     font-weight: bold;
