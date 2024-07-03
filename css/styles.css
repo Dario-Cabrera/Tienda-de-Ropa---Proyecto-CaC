@@ -1078,7 +1078,7 @@ select{
 }
 
 .modalRegister {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -1220,7 +1220,7 @@ select{
 }
 
 .modalUpdateData {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -1325,7 +1325,7 @@ select{
   }
   
   .modalLogIn {
-      display: none; /* Oculto por defecto */
+      display: none; 
       position: fixed;
       z-index: 1;
       left: 0;
@@ -1387,7 +1387,7 @@ select{
 
 .divParaAlejarBotones {
     display: flex;
-    gap: 10px; /* Ajusta el valor según sea necesario */
+    gap: 10px; 
   }
 
 .confirmDeleteBtn{
@@ -1440,7 +1440,7 @@ select{
 
 .modalBtnsContainer {
     display: flex;
-    gap: 10px; /* Ajusta el valor según sea necesario */
+    gap: 10px; 
   }
 
 @media (max-width: 768px) {
@@ -1480,36 +1480,4 @@ select{
         font-size: large;
     }
 }
-
-/* 
-
-    
-  input[type="text" ], 
-  select{
-    box-shadow: inset 1px 1px 3px #ccc;
-    border-radius: 5px;
-  }
-  
-  input[type="password" ]{
-    box-shadow: inset 1px 1px 3px #ccc;
-    border-radius: 5px;
-  } 
-  
-  label{
-    margin-bottom: 5px;
-  }
-    
-  button{
-    width: 60%;
-    margin: 0 auto; 
-  }
-  
-  .error{
-    width: 200px;
-    text-align: center;
-    color: red;
-    font-weight: bold;
-    
-  }
-  
   
