@@ -19,6 +19,7 @@ html {
     min-height: 100vh;
     position: relative;
     max-height: 200vh;
+    border-top: 5px double #3C3633;
 }
 
 .sectionContainer {
@@ -132,6 +133,10 @@ html {
 .navbar-nav {
     list-style: none;
     display: flex;
+}
+
+.navbar-items {
+    margin-left: 6rem;
 }
 
 .nav-item {
@@ -263,7 +268,20 @@ html {
     }
 
     .navbar-search {
-        margin-top: 1rem;
+        margin-top: 0.3rem;
+        height: 20px;
+    }
+
+    .divBotonLogin {
+        margin-top: 0.8rem;
+    }
+
+    .containerBotonesCuenta {
+padding-top: 1rem;
+    }
+
+    .divLogoMiCuenta {
+        padding-top: 1rem;
     }
 
     .titleMain {
@@ -341,6 +359,7 @@ html {
 
 .containerNosotros {
     text-align: center;
+    border-top: 5px double #3C3633;
 }
 
 .containerNosotros1 {
@@ -422,6 +441,7 @@ li.elegirnos-lista {
     background-color: #ffffff;
     height: 45rem;
     padding-bottom: 10%;
+    border-top: 5px double #3C3633;
 }
 
 .h4Información {
@@ -704,6 +724,7 @@ html {
 .mainShop {
     width: 100%;
     margin-bottom: 5em;
+    border-top: 5px double #3C3633;
 }
 
 .shopTitle {
@@ -867,6 +888,561 @@ html {
     object-fit: cover;
 }
 
+.divBotonLogin {
+    margin-bottom: 0.25rem;
+}
+
+.botonLogin {
+    width: 100%;
+    background-color: #000000;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+.botonLogin:hover {
+    background-color: #e0ccbe;
+    color: #000000;
+}
+
+.divLogoMiCuenta {
+    margin-top: 0.15rem;
+}
+
+.logoMiCuenta {
+    background-color: #e0ccbe;
+    border: none;
+    cursor: pointer;
+}
+
+
+.logoMiCuenta img {
+    width: 30px; 
+    height: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 78px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    width: 100%;
+    text-align: center;
+    padding: 4px 6px;
+    border: solid 0.1px #3C3633;
+    border-radius: 2px;
+    background-color: #000000;
+    color: #e0ccbe;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #e0ccbe;
+    color: #000000;
+}
+
+.containerBotonesCuenta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding-right: 0.5rem;
+}
+
+.divLogoMiCuentaImg {
+margin-left: 20px;
+}
+
+.divLogoMiCuentaImg img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.formRegister{
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.titleRegister{
+    text-align: center;
+    font-size: 4em;
+    color: #3C3633;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+  
+.bodyRegister{
+    background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+} 
+
+.mainRegister{
+   background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+   border-top: 5px double #3C3633;
+   padding-bottom: 5em;
+}
+
+.submitRegister{
+    background-color: #000000;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+.submitRegister:hover{
+    background-color: #e0ccbe;
+    color: #000000;
+
+}
+.formRegister button, label, input, select{
+    display: block;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%; 
+    margin: 0;
+}
+.password-input-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.password-input {
+    width: 100%;
+    padding-right: 30px; 
+    box-sizing: border-box; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+} 
+
+.formRegister input, 
+select{
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+.formRegister label{
+  margin-bottom: 5px;
+}
+
+
+.errorRegister{
+  width: 200px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.modalRegister {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modalContent {
+    background-color: #3C3633;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.closeRegister {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeRegister:hover,
+.closeRegister:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formUpdateData{
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.titleUpdateData{
+    text-align: center;
+    font-size: 4em;
+    color: #3C3633;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+  
+.bodyUpdateData{
+    background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+} 
+
+.mainUpdateData{
+   background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+   border-top: 5px double #3C3633;
+   padding-bottom: 4em;
+}
+
+.submitUpdateData{
+    background-color: #000000;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+    margin-bottom: 100px
+}
+
+.submitUpdateData:hover{
+    background-color: #e0ccbe;
+    color: #000000;
+
+}
+.formUpdateData button, label, input, select{
+    display: block;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+}
+
+.passwordContainerUpdateData {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%; 
+    margin: 0;
+}
+.passwordInputWrapperUpdateData {
+    width: 100%;
+    position: relative;
+}
+
+.passwordInputUpdateData {
+    width: 100%;
+    padding-right: 30px; 
+    box-sizing: border-box; 
+}
+
+.togglePasswordUpdateData {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+} 
+
+.formUpdateData input, 
+select{
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+.formUpdateData label{
+  margin-bottom: 5px;
+}
+
+
+.errorUpdateData{
+  width: 200px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.modalUpdateData {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modalContent {
+    background-color: #3C3633;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.closeUpdateData {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeUpdateData:hover,
+.closeUpdateData:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bodyLogIn{
+    background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+} 
+
+.mainLogIn {
+    background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
+    border-top: 5px double #3C3633;
+    padding-bottom: 12.25em;
+ }
+
+ .sectionContainerLogIn {
+    text-align: center;
+}
+
+.formLogIn {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.titleLogIn {
+    text-align: center;
+    font-size: 4em;
+    color: #3C3633;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.password-containerLogIn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%; 
+    margin: 0;
+}
+
+.submitLogIn {
+    background-color: #e0ccbe;
+    color: #000000;
+    margin-top: 40px;
+}
+
+.submitSignUp {
+    background-color: #e0ccbe;
+    color: #000000;
+    margin-top: 40px;
+}
+
+.email-containerLogIn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%; 
+    margin: 0;
+    text-align: center;
+
+}
+
+.errorLogIn {
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+  }
+  
+  .modalLogIn {
+      display: none; 
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+      padding-top: 60px;
+  }
+  
+  .modalContentLogIn {
+      background-color: #3C3633;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 40%;
+      color: #ffffff;
+      text-align: center;
+  }
+  
+  .closeLogIn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+  .closeLogIn:hover,
+  .closeLogIn:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .deleteConfirmBtn{
+    background-color: red;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin: auto;
+}
+
+.deleteConfirmBtn:hover{
+    background-color: #ff6e6e;
+    color: #000000;
+
+}
+
+.divParaAlejarBotones {
+    display: flex;
+    gap: 10px; 
+  }
+
+.confirmDeleteBtn{
+    background-color: red;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin: auto;
+}
+
+
+.confirmDeleteBtn:hover{
+    background-color: #ff6e6e;
+    color: #000000;
+
+}
+
+.cancelDeleteBtn{
+    background-color: #000000;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+    margin-bottom: 100px
+}
+
+.cancelDeleteBtn:hover{
+    background-color: #e0ccbe;
+    color: #000000;
+
+}
+
+.modalBtnsContainer {
+    display: flex;
+    gap: 10px; 
+  }
+
 @media (max-width: 768px) {
 
     .containerGaleriasVestidos {
@@ -904,3 +1480,4 @@ html {
         font-size: large;
     }
 }
+  

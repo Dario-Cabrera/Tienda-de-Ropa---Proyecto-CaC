@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Levona - Log In</title>
+    <link rel="icon" href="./img/icono/logoVerticalBlanco.ico" />
+</head>
+<body id="bodyLogin" class="bodyLogin">
+    <header>
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="./index.html"><img src="/img/logoVertical.png" alt="Logo" class="logoNav" /></a>
+            </div>
+            <div class="navbar-items">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="./index.html" class="navbar-link">Home</a></li>
+                <li class="nav-item"><a href="./aboutus.html" class="navbar-link">About Us</a></li>
+                <li class="nav-item"><a href="./shop.html" class="navbar-link">Shop</a></li>
+                <li class="nav-item"><a href="./contactUs.html" class="navbar-link">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="containerBotonesCuenta">
+              <div class="navbar-search">
+                <input type="text" class="search-input" placeholder="Search for your product..." />
+              </div>
+              <div class="divBotonLogin">
+                <a href="login.html"><button id="botonLogin" type="submit" class="botonLogin">LogIn</button></a>
+              </div>
+              <div class="divLogoMiCuenta">
+                <div class="divLogoMiCuentaImg">
+                  <button id="logoMiCuenta" type="submit" class="logoMiCuenta"><img src="./img/micuentaicono/perfil-del-usuario.png" alt="micuenta" /></button>
+                </div>
+                <div id="dropdownMiCuenta" class="dropdown-content">
+                  <a href="updateData.html"><button>Update Data</button></a>
+                  <a href="logout.html"><button>LogOut</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <main class="mainLogIn">
+    <section class="sectionContainerLogIn">
+    <h1 id="titleLogIn" class="titleLogIn">Log In!</h1>
+    <form id="formLogIn" class="formLogIn" method="post">
+    <p class="email-containerLogIn">
+      <label for="email">Email: </label>
+      <input id="emailLogIn" name="emailLogIn" type="text" placeholder="example@example.com"/>
+      <span id="emailError" class="errorLogIn"></span>
+    </p>
+    <p class="password-containerLogIn">
+      <label for="passwordInput">Password: </label>
+      <div class="password-input-wrapper">
+        <input id="passwordInput" type="password" class="password-input" placeholder="Please create your Password">
+        <span id="togglePassword" class="toggle-password">👁️</span>
+      </div>
+      <span id="passwordError" class="errorLogIn"></span>
+    </p>
+    <button id="submitLogIn" class="submitLogIn" type="submit">Log In</button>
+    <p id="error" class="errorLogIn"></p>
+    <button id="submitSignUp" class="submitSignUp" type="submit">Sign Up</button>
+    <p id="error" class="errorLogIn"></p>
+    <div id="successModalLogIn" class="modalLogIn">
+      <div class="modalContent">
+          <span class="closeLogIn">&times;</span>
+          <p>Log In complete!</p>
+          <p>You'll be redirected to our Homepage</p> 
+      </div>
+    </div>
+</form>
+</section>
+</main>
+<footer class="footerContainer">
+  <div class="footerDivContainer">
+    <div class="footerItemContainer">
+      <div class="footerDivItem">
+        <h4 class="footerLink">Find Us</h4>
+        <h6>Av. Colón 147</h6>
+        <h6>Monday to Friday: 08:00 to 16:00</h6>
+        <h6>Saturday: 08:00 to 12:00</h6>
+      </div>
+      <div class="footerDivItem">
+        <h4 class="footerLink">Social Media</h4>
+        <a href="https://www.facebook.com/LevonaFashion&Clothing" target="_blank">
+          <img src="https://i.ibb.co/svX8BYY/facebook-5968973-BLANCO.png" width="29" height="29" alt="Icono Facebook" />
+        </a>
+        <a href="https://www.instagram.com/LevonaFashion&Clothing" target="_blank">
+          <img src="https://i.ibb.co/xs2KJMx/instagram-5968982-BLANCO.png" width="29" height="29" alt="Icono Instagram" />
+        </a>
+        <a href="https://www.whatsapp.com/LevonaFashion&Clothing" target="_blank">
+          <img src="https://i.ibb.co/s6fQm49/whatsapp-5969035-BLANCO.png" width="29" height="29" alt="Icono Whatsapp" />
+        </a>
+      </div>
+    </div>
+    <div class="footerDivItem">
+      <img class="footerLogo" src="/img/logoVerticalBlanco.png" alt="LogoFooter" />
+    </div>
+  </div>
+</footer>
+<script src="/js/login.js"></script>
+</body>
+</html>
