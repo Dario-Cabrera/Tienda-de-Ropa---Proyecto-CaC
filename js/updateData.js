@@ -1,27 +1,72 @@
-const formUpdateData = document.getElementById("formUpdateData");
-const inputName = document.getElementById("nameUpdateData");
-const inputSurname = document.getElementById("surnameUpdateData");
-const inputEmail = document.getElementById("emailUpdateData");
-const inputPassword = document.getElementById("passwordInputUpdateData");
-const inputPhone = document.getElementById("phoneUpdateData");
-const inputId = document.getElementById("idUpdateData");
-const inputAddress = document.getElementById("addressUpdateData");
-const inputState = document.getElementById("stateUpdateData");
+const userId = localStorage.getItem("id");
 
+document.addEventListener("DOMContentLoaded", async function () {
+  const botonLogin = document.getElementById("botonLogin");
+  const logoMiCuenta = document.getElementById("logoMiCuenta");
+
+  if (userId !== null && !isNaN(userId)) {
+    botonLogin.style.display = "none";
+    logoMiCuenta.style.display = "block";
+
+    try {
+      const response = await fetch(`https://dariocabrera10.pythonanywhere.com/api/users/${userId}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+
+      const userData = await response.json();
+      console.log("User data:", userData);
+
+      document.getElementById("nameUpdateData").value = userData.name;
+      document.getElementById("surnameUpdateData").value = userData.surname;
+      document.getElementById("emailUpdateData").value = userData.email;
+      document.getElementById("phoneUpdateData").value = userData.phone;
+      document.getElementById("idUpdateData").value = userData.dni;
+      document.getElementById("addressUpdateData").value = userData.address;
+
+      const stateSelect = document.getElementById("stateUpdateData");
+      const stateValue = userData.state;
+      for (let i = 0; i < stateSelect.options.length; i++) {
+        if (stateSelect.options[i].value === stateValue) {
+          stateSelect.selectedIndex = i;
+          break;
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    }
+  } else {
+    logoMiCuenta.style.display = "none";
+    botonLogin.style.display = "block";
+  }
+});
+
+const formUpdateData = document.getElementById("formUpdateData");
 const modalUpdateData = document.getElementById("successModal");
 const spanUpdateData = document.getElementsByClassName("closeUpdateData")[0];
-
 const logoMiCuenta = document.getElementById("logoMiCuenta");
 const dropdownMiCuenta = document.getElementById("dropdownMiCuenta");
+const deleteAccountBtn = document.getElementById("deleteConfirmBtn");
+const confirmDeleteModal = document.getElementById("confirmDeleteModal");
+const cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
+const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
 
 logoMiCuenta.addEventListener("click", function () {
   dropdownMiCuenta.style.display = dropdownMiCuenta.style.display === "block" ? "none" : "block";
 });
+
 document.addEventListener("click", function (event) {
   if (!logoMiCuenta.contains(event.target)) {
     dropdownMiCuenta.style.display = "none";
   }
 });
+
 document.getElementById("togglePasswordUpdateData").addEventListener("click", function () {
   let passwordField = document.getElementById("passwordInputUpdateData");
   if (passwordField.type === "password") {
@@ -31,7 +76,36 @@ document.getElementById("togglePasswordUpdateData").addEventListener("click", fu
   }
 });
 
-formUpdateData.addEventListener("submit", (e) => {
+deleteAccountBtn.addEventListener("click", function () {
+  confirmDeleteModal.style.display = "block";
+});
+
+cancelDeleteBtn.addEventListener("click", function () {
+  confirmDeleteModal.style.display = "none";
+});
+
+confirmDeleteBtn.addEventListener("click", async function () {
+  try {
+    const response = await fetch(`https://dariocabrera10.pythonanywhere.com/api/users/${userId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to delete user account");
+    }
+
+    console.log("User account deleted successfully");
+    localStorage.removeItem("id");
+    window.location.href = "index.html";
+  } catch (error) {
+    console.error("Error deleting user account:", error);
+  }
+});
+
+formUpdateData.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   let errors = document.querySelectorAll(".errorUpdateData");
@@ -40,6 +114,15 @@ formUpdateData.addEventListener("submit", (e) => {
   });
 
   let isValid = true;
+
+  const inputName = document.getElementById("nameUpdateData");
+  const inputSurname = document.getElementById("surnameUpdateData");
+  const inputEmail = document.getElementById("emailUpdateData");
+  const inputPassword = document.getElementById("passwordInputUpdateData");
+  const inputPhone = document.getElementById("phoneUpdateData");
+  const inputId = document.getElementById("idUpdateData");
+  const inputAddress = document.getElementById("addressUpdateData");
+  const inputState = document.getElementById("stateUpdateData");
 
   if (inputName.value.length < 3) {
     document.getElementById("nameError").textContent = "Please enter a valid name (3 letters min. and spaces only).";
@@ -54,11 +137,6 @@ formUpdateData.addEventListener("submit", (e) => {
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
   if (inputEmail.value.trim() === "" || !regexEmail.test(inputEmail.value)) {
     document.getElementById("emailError").textContent = "Please enter a valid email address.";
-    isValid = false;
-  }
-
-  if (inputPassword.value.length < 8) {
-    document.getElementById("passwordError").textContent = "Please enter a valid password (8 characters min.)";
     isValid = false;
   }
 
@@ -85,7 +163,40 @@ formUpdateData.addEventListener("submit", (e) => {
   }
 
   if (isValid) {
-    modalUpdateData.style.display = "block";
+    try {
+      const userData = {
+        name: inputName.value,
+        surname: inputSurname.value,
+        email: inputEmail.value,
+        phone: inputPhone.value,
+        dni: inputId.value,
+        address: inputAddress.value,
+        state: inputState.value,
+        admin: false,
+      };
+
+      if (inputPassword.value.length >= 8) {
+        userData.password = inputPassword.value;
+      }
+
+      console.log("Form data to be sent:", userData);
+
+      const response = await fetch(`https://dariocabrera10.pythonanywhere.com/api/users/${userId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to update user data");
+      }
+
+      modalUpdateData.style.display = "block";
+    } catch (error) {
+      console.error("Error updating user data:", error);
+    }
   }
 });
 

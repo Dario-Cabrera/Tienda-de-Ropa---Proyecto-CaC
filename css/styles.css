@@ -1078,7 +1078,7 @@ select{
 }
 
 .modalRegister {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -1136,7 +1136,7 @@ select{
 .mainUpdateData{
    background-image: linear-gradient(#e0ccbe, #e0ccbe, #eeedeb, #eeedeb);
    border-top: 5px double #3C3633;
-   padding-bottom: 5em;
+   padding-bottom: 4em;
 }
 
 .submitUpdateData{
@@ -1154,6 +1154,7 @@ select{
     transition: background-color 0.3s ease;
     font-weight: bold;
     margin-top: 6%;
+    margin-bottom: 100px
 }
 
 .submitUpdateData:hover{
@@ -1219,7 +1220,7 @@ select{
 }
 
 .modalUpdateData {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -1324,7 +1325,7 @@ select{
   }
   
   .modalLogIn {
-      display: none; /* Oculto por defecto */
+      display: none; 
       position: fixed;
       z-index: 1;
       left: 0;
@@ -1359,6 +1360,87 @@ select{
       color: black;
       text-decoration: none;
       cursor: pointer;
+  }
+
+  .deleteConfirmBtn{
+    background-color: red;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin: auto;
+}
+
+.deleteConfirmBtn:hover{
+    background-color: #ff6e6e;
+    color: #000000;
+
+}
+
+.divParaAlejarBotones {
+    display: flex;
+    gap: 10px; 
+  }
+
+.confirmDeleteBtn{
+    background-color: red;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin: auto;
+}
+
+
+.confirmDeleteBtn:hover{
+    background-color: #ff6e6e;
+    color: #000000;
+
+}
+
+.cancelDeleteBtn{
+    background-color: #000000;
+    color: #e0ccbe;
+    border: solid 0.5px #000000;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 6%;
+    margin-bottom: 100px
+}
+
+.cancelDeleteBtn:hover{
+    background-color: #e0ccbe;
+    color: #000000;
+
+}
+
+.modalBtnsContainer {
+    display: flex;
+    gap: 10px; 
   }
 
 @media (max-width: 768px) {
@@ -1398,36 +1480,4 @@ select{
         font-size: large;
     }
 }
-
-/* 
-
-    
-  input[type="text" ], 
-  select{
-    box-shadow: inset 1px 1px 3px #ccc;
-    border-radius: 5px;
-  }
-  
-  input[type="password" ]{
-    box-shadow: inset 1px 1px 3px #ccc;
-    border-radius: 5px;
-  } 
-  
-  label{
-    margin-bottom: 5px;
-  }
-    
-  button{
-    width: 60%;
-    margin: 0 auto; 
-  }
-  
-  .error{
-    width: 200px;
-    text-align: center;
-    color: red;
-    font-weight: bold;
-    
-  }
-  
   
