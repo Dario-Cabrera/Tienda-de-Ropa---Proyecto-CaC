@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   const logoMiCuenta = document.getElementById("logoMiCuenta");
 
   if (userId !== null && !isNaN(userId)) {
-    // Si hay un userId válido en localStorage, ocultar botonLogin y mostrar logoMiCuenta
     botonLogin.style.display = "none";
     logoMiCuenta.style.display = "block";
 
@@ -22,17 +21,15 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
 
       const userData = await response.json();
-      console.log("User data:", userData); // Mostrar el objeto userData por consola
+      console.log("User data:", userData);
 
-      // Llenar los campos del formulario con los datos obtenidos
       document.getElementById("nameUpdateData").value = userData.name;
       document.getElementById("surnameUpdateData").value = userData.surname;
       document.getElementById("emailUpdateData").value = userData.email;
       document.getElementById("phoneUpdateData").value = userData.phone;
-      document.getElementById("idUpdateData").value = userData.dni; // Mostrar el ID en un campo oculto o no editable
+      document.getElementById("idUpdateData").value = userData.dni;
       document.getElementById("addressUpdateData").value = userData.address;
 
-      // Preseleccionar el estado en el dropdown
       const stateSelect = document.getElementById("stateUpdateData");
       const stateValue = userData.state;
       for (let i = 0; i < stateSelect.options.length; i++) {
@@ -43,10 +40,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     } catch (error) {
       console.error("Error fetching user data:", error);
-      // Manejo de errores, por ejemplo, mostrar un mensaje al usuario
     }
   } else {
-    // Si no hay userId en localStorage, ocultar logoMiCuenta y mostrar botonLogin
     logoMiCuenta.style.display = "none";
     botonLogin.style.display = "block";
   }
@@ -104,11 +99,9 @@ confirmDeleteBtn.addEventListener("click", async function () {
 
     console.log("User account deleted successfully");
     localStorage.removeItem("id");
-    // Aquí puedes redirigir al usuario a una página de confirmación o cerrar la sesión
-    window.location.href = "index.html"; // Ejemplo de redirección a logout.html
+    window.location.href = "index.html";
   } catch (error) {
     console.error("Error deleting user account:", error);
-    // Manejo de errores, por ejemplo, mostrar un mensaje al usuario
   }
 });
 
@@ -182,12 +175,11 @@ formUpdateData.addEventListener("submit", async (e) => {
         admin: false,
       };
 
-      // Agregar password solo si se cambió
       if (inputPassword.value.length >= 8) {
         userData.password = inputPassword.value;
       }
 
-      console.log("Form data to be sent:", userData); // Imprimir el objeto que se enviará por consola
+      console.log("Form data to be sent:", userData);
 
       const response = await fetch(`https://dariocabrera10.pythonanywhere.com/api/users/${userId}`, {
         method: "PUT",
@@ -204,7 +196,6 @@ formUpdateData.addEventListener("submit", async (e) => {
       modalUpdateData.style.display = "block";
     } catch (error) {
       console.error("Error updating user data:", error);
-      // Manejo de errores, por ejemplo, mostrar un mensaje al usuario
     }
   }
 });
