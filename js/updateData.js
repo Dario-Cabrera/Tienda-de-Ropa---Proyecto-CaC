@@ -1,6 +1,14 @@
 const userId = localStorage.getItem("id");
+
 document.addEventListener("DOMContentLoaded", async function () {
+  const botonLogin = document.getElementById("botonLogin");
+  const logoMiCuenta = document.getElementById("logoMiCuenta");
+
   if (userId !== null && !isNaN(userId)) {
+    // Si hay un userId válido en localStorage, ocultar botonLogin y mostrar logoMiCuenta
+    botonLogin.style.display = "none";
+    logoMiCuenta.style.display = "block";
+
     try {
       const response = await fetch(`https://dariocabrera10.pythonanywhere.com/api/users/${userId}`, {
         method: "GET",
@@ -37,6 +45,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.error("Error fetching user data:", error);
       // Manejo de errores, por ejemplo, mostrar un mensaje al usuario
     }
+  } else {
+    // Si no hay userId en localStorage, ocultar logoMiCuenta y mostrar botonLogin
+    logoMiCuenta.style.display = "none";
+    botonLogin.style.display = "block";
   }
 });
 
@@ -45,6 +57,10 @@ const modalUpdateData = document.getElementById("successModal");
 const spanUpdateData = document.getElementsByClassName("closeUpdateData")[0];
 const logoMiCuenta = document.getElementById("logoMiCuenta");
 const dropdownMiCuenta = document.getElementById("dropdownMiCuenta");
+const deleteAccountBtn = document.getElementById("deleteConfirmBtn");
+const confirmDeleteModal = document.getElementById("confirmDeleteModal");
+const cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
+const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
 
 logoMiCuenta.addEventListener("click", function () {
   dropdownMiCuenta.style.display = dropdownMiCuenta.style.display === "block" ? "none" : "block";
@@ -62,6 +78,37 @@ document.getElementById("togglePasswordUpdateData").addEventListener("click", fu
     passwordField.type = "text";
   } else {
     passwordField.type = "password";
+  }
+});
+
+deleteAccountBtn.addEventListener("click", function () {
+  confirmDeleteModal.style.display = "block";
+});
+
+cancelDeleteBtn.addEventListener("click", function () {
+  confirmDeleteModal.style.display = "none";
+});
+
+confirmDeleteBtn.addEventListener("click", async function () {
+  try {
+    const response = await fetch(`https://dariocabrera10.pythonanywhere.com/api/users/${userId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to delete user account");
+    }
+
+    console.log("User account deleted successfully");
+    localStorage.removeItem("id");
+    // Aquí puedes redirigir al usuario a una página de confirmación o cerrar la sesión
+    window.location.href = "index.html"; // Ejemplo de redirección a logout.html
+  } catch (error) {
+    console.error("Error deleting user account:", error);
+    // Manejo de errores, por ejemplo, mostrar un mensaje al usuario
   }
 });
 

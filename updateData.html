@@ -1,5 +1,3 @@
-update html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,121 +11,134 @@ update html
   <link rel="icon" href="./img/icono/logoVerticalBlanco.ico" />
 </head>
 <body id="bodyUpdateData" class="bodyUpdateData">
-    <header>
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <a href="./index.html"><img src="/img/logoVertical.png" alt="Logo" class="logoNav" /></a>
+<header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="./index.html"><img src="/img/logoVertical.png" alt="Logo" class="logoNav" /></a>
+        </div>
+        <div class="navbar-items">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="./index.html" class="navbar-link">Home</a></li>
+            <li class="nav-item"><a href="./aboutus.html" class="navbar-link">About Us</a></li>
+            <li class="nav-item"><a href="./shop.html" class="navbar-link">Shop</a></li>
+            <li class="nav-item"><a href="./contactUs.html" class="navbar-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="containerBotonesCuenta">
+          <div class="navbar-search">
+            <input type="text" class="search-input" placeholder="Search for your product..." />
+          </div>
+          <div class="divBotonLogin">
+            <a href="login.html"><button id="botonLogin" type="submit" class="botonLogin">LogIn</button></a>
+          </div>
+          <div class="divLogoMiCuenta">
+            <div class="divLogoMiCuentaImg">
+              <button id="logoMiCuenta" type="submit" class="logoMiCuenta"><img src="./img/micuentaicono/perfil-del-usuario.png" alt="micuenta" /></button>
             </div>
-            <div class="navbar-items">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a href="./index.html" class="navbar-link">Home</a></li>
-                <li class="nav-item"><a href="./aboutus.html" class="navbar-link">About Us</a></li>
-                <li class="nav-item"><a href="./shop.html" class="navbar-link">Shop</a></li>
-                <li class="nav-item"><a href="./contactUs.html" class="navbar-link">Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="containerBotonesCuenta">
-              <div class="navbar-search">
-                <input type="text" class="search-input" placeholder="Search for your product..." />
-              </div>
-              <div class="divBotonLogin">
-                <a href="login.html"><button id="botonLogin" type="submit" class="botonLogin">LogIn</button></a>
-              </div>
-              <div class="divLogoMiCuenta">
-                <div class="divLogoMiCuentaImg">
-                  <button id="logoMiCuenta" type="submit" class="logoMiCuenta"><img src="./img/micuentaicono/perfil-del-usuario.png" alt="micuenta" /></button>
-                </div>
-                <div id="dropdownMiCuenta" class="dropdown-content">
-                  <a href="updateData.html"><button>Update Data</button></a>
-                  <a href="logout.html"><button>LogOut</button></a>
-                </div>
-              </div>
+            <div id="dropdownMiCuenta" class="dropdown-content">
+              <a href="updateData.html"><button>Update Data</button></a>
+              <button id="deleteAccountBtn">Delete Account</button> <!-- Nuevo botón para eliminar cuenta -->
+              <a href="logout.html"><button>LogOut</button></a>
             </div>
           </div>
-        </nav>
-      </header>
-    <main class="mainUpdateData">
-    <section class="sectionContainerUpdateData">
-    <h1 id="titleUpdateData" class="titleUpdateData">Update Data</h1>
-    <form id="formUpdateData" class="formUpdateData" method="post">
-    <p>
-      <label for="name">First Name: </label>
-      <input id="nameUpdateData" name="nameUpdateData" type="text" placeholder="Please enter your First Name" />
-      <span id="nameError" class="errorUpdateData"></span>
-    </p>
-    <p>
-      <label for="surname">Surname: </label>
-      <input id="surnameUpdateData" name="surnameUpdateData" type="text" placeholder="Please enter your Surname" />
-      <span id="surnameError" class="errorUpdateData"></span>
-    </p>
-    <p>
-      <label for="email">Email: </label>
-      <input id="emailUpdateData" name="emailUpdateData" type="text" placeholder="example@example.com"/>
-      <span id="emailError" class="errorUpdateData"></span>
-    </p>
-    <p class="passwordContainerUpdateData">
-        <label for="passwordInputUpdateData">Password: </label>
-        <div class="passwordInputWrapperUpdateData">
-          <input id="passwordInputUpdateData" type="password" class="passwordInputUpdateData" placeholder="Please create your Password">
-          <span id="togglePasswordUpdateData" class="togglePasswordUpdateData">👁️</span>
         </div>
-        <span id="passwordError" class="errorUpdateData"></span>
-    </p>
-    <p>
-      <label for="phone">Mobile phone: </label>
-      <input id="phoneUpdateData" name="phoneUpdateData" type="text" placeholder="Please enter your Phone (only numbers)"/>
-      <span id="phoneError" class="errorUpdateData"></span>
-    </p>
-    <p>
-      <label for="id">ID Number: </label>
-      <input id="idUpdateData" name="idUpdateData" type="text" placeholder="Please enter your ID Number (only numbers)"/>
-      <span id="idError" class="errorUpdateData"></span>
-    </p>
-    <p>
-      <label for="address">Address: </label>
-      <input id="addressUpdateData" name="addressUpdateData" type="text" placeholder="Please enter your complete Street Name and Number"/>
-      <span id="addressError" class="errorUpdateData"></span>
-    </p>
-    <p>
-      <label for="state">Province/State: </label>
-      <select name="stateUpdateData" id="stateUpdateData">
-        <option value="default">Select your province/state</option>
-        <option value="CABA">CABA</option>
-        <option value="Buenos Aires">Buenos Aires</option>
-        <option value="Catamarca">Catamarca</option>
-        <option value="Chaco">Chaco</option>
-        <option value="Chubut">Chubut</option>
-        <option value="Córdoba">Córdoba</option>
-        <option value="Corrientes">Corrientes</option>
-        <option value="Entre Ríos">Entre Ríos</option>
-        <option value="Formosa">Formosa</option>
-        <option value="Jujuy">Jujuy</option>
-        <option value="La Pampa">La Pampa</option>
-        <option value="La Rioja">La Rioja</option>
-        <option value="Mendoza">Mendoza</option>
-        <option value="Misiones">Misiones</option>
-        <option value="Neuquén">Neuquén</option>
-        <option value="Rio Negro">Rio Negro</option>
-        <option value="Salta">Salta</option>
-        <option value="San Juan">San Juan</option>
-        <option value="San Luis">San Luis</option>
-        <option value="Santa Cruz">Santa Cruz</option>
-        <option value="Santa Fe">Santa Fe</option>
-        <option value="Santiago del Estero">Santiago del Estero</option>
-        <option value="Tierra del Fuego">Tierra del Fuego</option>
-        <option value="Tucumán">Tucumán</option>
-      </select>
-      <span id="stateError" class="errorUpdateData"></span>
-    </p>
-    <button id="submitUpdateData" class="submitUpdateData" type="submit">Update</button>
-    <p id="error" class="errorUpdateData"></p>
+      </div>
+    </nav>
+  </header>
+<main class="mainUpdateData">
+<section class="sectionContainerUpdateData">
+<h1 id="titleUpdateData" class="titleUpdateData">Update Data</h1>
+<form id="formUpdateData" class="formUpdateData" method="post">
+<p>
+  <label for="name">First Name: </label>
+  <input id="nameUpdateData" name="nameUpdateData" type="text" placeholder="Please enter your First Name" />
+  <span id="nameError" class="errorUpdateData"></span>
+</p>
+<p>
+  <label for="surname">Surname: </label>
+  <input id="surnameUpdateData" name="surnameUpdateData" type="text" placeholder="Please enter your Surname" />
+  <span id="surnameError" class="errorUpdateData"></span>
+</p>
+<p>
+  <label for="email">Email: </label>
+  <input id="emailUpdateData" name="emailUpdateData" type="text" placeholder="example@example.com"/>
+  <span id="emailError" class="errorUpdateData"></span>
+</p>
+<p class="passwordContainerUpdateData">
+    <label for="passwordInputUpdateData">Password: </label>
+    <div class="passwordInputWrapperUpdateData">
+      <input id="passwordInputUpdateData" type="password" class="passwordInputUpdateData" placeholder="Please create your Password">
+      <span id="togglePasswordUpdateData" class="togglePasswordUpdateData">👁️</span>
+    </div>
+    <span id="passwordError" class="errorUpdateData"></span>
+</p>
+<p>
+  <label for="phone">Mobile phone: </label>
+  <input id="phoneUpdateData" name="phoneUpdateData" type="text" placeholder="Please enter your Phone (only numbers)"/>
+  <span id="phoneError" class="errorUpdateData"></span>
+</p>
+<p>
+  <label for="id">ID Number: </label>
+  <input id="idUpdateData" name="idUpdateData" type="text" placeholder="Please enter your ID Number (only numbers)"/>
+  <span id="idError" class="errorUpdateData"></span>
+</p>
+<p>
+  <label for="address">Address: </label>
+  <input id="addressUpdateData" name="addressUpdateData" type="text" placeholder="Please enter your complete Street Name and Number"/>
+  <span id="addressError" class="errorUpdateData"></span>
+</p>
+<p>
+  <label for="state">Province/State: </label>
+  <select name="stateUpdateData" id="stateUpdateData">
+    <option value="default">Select your province/state</option>
+    <option value="CABA">CABA</option>
+    <option value="Buenos Aires">Buenos Aires</option>
+    <option value="Catamarca">Catamarca</option>
+    <option value="Chaco">Chaco</option>
+    <option value="Chubut">Chubut</option>
+    <option value="Córdoba">Córdoba</option>
+    <option value="Corrientes">Corrientes</option>
+    <option value="Entre Ríos">Entre Ríos</option>
+    <option value="Formosa">Formosa</option>
+    <option value="Jujuy">Jujuy</option>
+    <option value="La Pampa">La Pampa</option>
+    <option value="La Rioja">La Rioja</option>
+    <option value="Mendoza">Mendoza</option>
+    <option value="Misiones">Misiones</option>
+    <option value="Neuquén">Neuquén</option>
+    <option value="Rio Negro">Rio Negro</option>
+    <option value="Salta">Salta</option>
+    <option value="San Juan">San Juan</option>
+    <option value="San Luis">San Luis</option>
+    <option value="Santa Cruz">Santa Cruz</option>
+    <option value="Santa Fe">Santa Fe</option>
+    <option value="Santiago del Estero">Santiago del Estero</option>
+    <option value="Tierra del Fuego">Tierra del Fuego</option>
+    <option value="Tucumán">Tucumán</option>
+  </select>
+  <span id="stateError" class="errorUpdateData"></span>
+</p><div class="divParaAlejarBotones">
+<button id="submitUpdateData" class="submitUpdateData" type="submit">Update</button>
+<button id="deleteConfirmBtn" class="deleteConfirmBtn" type="button">Delete Account</button> <!-- Botón para eliminar cuenta -->
+</div>
+<p id="error" class="errorUpdateData"></p>
 <!-- Modal -->
+<div id="confirmDeleteModal" class="modalUpdateData">
+  <div class="modalContent">
+    <span class="closeUpdateData">&times;</span>
+    <p>Are you sure you want to delete your account?</p>
+    <div class="modalBtnsContainer">
+      <button id="cancelDeleteBtn" class="cancelDeleteBtn">Cancel</button>
+      <button id="confirmDeleteBtn" class="confirmDeleteBtn">Yes, I'm sure</button>
+    </div>
+  </div>
+</div>
 <div id="successModal" class="modalUpdateData">
   <div class="modalContent">
-      <span class="closeUpdateData">&times;</span>
-      <p>Update complete!</p>
-      <p>You'll be redirected to our Homepage</p> 
+    <span class="closeUpdateData">&times;</span>
+    <p>Update complete!</p>
+    <p>You'll be redirected to our Homepage</p> 
   </div>
 </div>
 </form>

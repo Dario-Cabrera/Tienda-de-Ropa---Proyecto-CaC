@@ -11,6 +11,24 @@ const modalRegister = document.getElementById("successModal");
 const spanRegister = document.querySelector(".closeRegister");
 const logoMiCuenta = document.getElementById("logoMiCuenta");
 const dropdownMiCuenta = document.getElementById("dropdownMiCuenta");
+const botonLogin = document.getElementById("botonLogin");
+
+// Función para verificar si hay un ID en localStorage
+function checkLocalStorageId() {
+  const userId = localStorage.getItem("id");
+  if (userId !== null && !isNaN(userId)) {
+    // Mostrar logoMiCuenta y ocultar botonLogin
+    logoMiCuenta.style.display = "block";
+    botonLogin.style.display = "none";
+  } else {
+    // Ocultar logoMiCuenta y mostrar botonLogin
+    logoMiCuenta.style.display = "none";
+    botonLogin.style.display = "block";
+  }
+}
+
+// Llamar a la función al cargar la página
+document.addEventListener("DOMContentLoaded", checkLocalStorageId);
 
 logoMiCuenta.addEventListener("click", function () {
   dropdownMiCuenta.style.display = dropdownMiCuenta.style.display === "block" ? "none" : "block";
@@ -146,6 +164,9 @@ formRegister.addEventListener("submit", async (e) => {
       } else {
         console.error("Modal no encontrado. Verifica la selección de modalRegister.");
       }
+
+      // Update UI based on localStorage id
+      checkLocalStorageId(); // Actualizar el estado de los botones
     } catch (error) {
       console.error("Registration error:", error);
       document.getElementById("error").textContent = "Registration failed. Please try again later.";
